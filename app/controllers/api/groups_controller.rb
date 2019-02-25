@@ -22,7 +22,7 @@ class Api::GroupsController < ApplicationController
       :description,
       :host_id,
       :lat,
-      :long
+      :lng
     )
   end
 
