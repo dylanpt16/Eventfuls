@@ -1,5 +1,5 @@
 class Group < ApplicationRecord
-  validates :name, :description, :host_id, presennce: true
+  validates :name, :description, :host_id, presence: true
   validates :host_id, uniqueness: true
 
   has_many :memberships
