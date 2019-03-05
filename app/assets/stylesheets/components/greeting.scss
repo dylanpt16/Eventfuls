@@ -1,3 +1,20 @@
+.right-header-guest, .right-header-logged-in {
+  display: flex;
+  justify-content: row;
+}
+
+.create-event-label {
+  padding: 10px;
+  font-size: 14px;
+  margin: auto;
+}
+
+.create-event-label > a {
+  font-weight: bold;
+  font-size: 15px;
+  color: red;
+}
+
 .login-signup {
   padding: 10px;
   display: flex;
@@ -10,4 +27,9 @@
   text-decoration: none;
   color: rgba(0,0,0,.54);
   margin: 10px;
+}
+
+.header-group {
+  padding: 10px;
+  font-size: 14px;
 }
