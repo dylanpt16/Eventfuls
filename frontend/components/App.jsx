@@ -21,8 +21,8 @@ const App = () => (
       <GreetingContainer />
     </header>
     <Switch>
-      <Route path="/login" component={SessionFormContainer} />
-      <Route path="/signup" component={SessionFormContainer} />
+      <AuthRoute path="/login" component={SessionFormContainer} />
+      <AuthRoute path="/signup" component={SessionFormContainer} />
       <ProtectedRoute path="/events/new" component={EventFormContainer} />
     </Switch>
   </div>
