@@ -37,7 +37,7 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return(
-      <ul>
+      <ul className="session-form-errors">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
             {error}
@@ -52,33 +52,32 @@ class SessionForm extends React.Component {
       <div className="session-form-container">
         <form onSubmit={this.handleSubmit} className="session-form-box">
           <h1 className="session-form-welcome">Welcome to Eventfuls!</h1>
-          <br/>
           { this.renderErrors() }
-          <h1 className="session-form-type">{this.props.formType}</h1>
           <br/>
           <h1 className="session-form-directions">Enter Your Username and Password</h1>
           <div className="session-form">
             <br/>
-            <label>Username:
-              <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="session-input"
-              />
-            </label>
+            <input type="text"
+              value={this.state.username}
+              onChange={this.update('username')}
+              placeholder="Username"
+              className="session-input"
+            />
             <br/>
-            <label>Password:
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="session-input"
-              />
-            </label>
+            <input type="password"
+              value={this.state.password}
+              onChange={this.update('password')}
+              placeholder="Password"
+              className="session-input"
+            />
             <br/>
-            <input type="submit" value="Submit" />
+          <button
+            onClick={this.handleSubmit}
+            className="session-input-submit">{this.props.formType}</button>
           </div>
         </form>
         <div>
+          <h1>or</h1>
           <button
             onClick={this.guestLogin}
             className="guest-login-button">Login As Guest</button>
