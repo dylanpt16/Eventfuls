@@ -2,11 +2,11 @@
 <html>
   <head>
     <title>Eventfuls</title>
-    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key={AIzaSyAUCabB6Ucf_5ukr1RDvtx6ANzOLsIRRjY}" %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ ENV['GOOGLE_MAP_KEY'] }"%>
+    <%= stylesheet_link_tag 'application', media: 'all'%>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
     <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet">
   </head>
 
