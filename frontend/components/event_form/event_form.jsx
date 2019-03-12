@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 
+import EventMapContainer from '../event_map/event_map_container';
+
 class EventForm extends React.Component {
   constructor(props) {
     super(props);
@@ -34,6 +36,7 @@ class EventForm extends React.Component {
           <h3 className="new-event-title">Create A Event!</h3>
 
           <form onSubmit={this.handleSubmit}>
+            <EventMapContainer />
             <label className="event-field">Name</label>
             <input
               type="textarea"
