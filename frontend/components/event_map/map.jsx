@@ -18,11 +18,7 @@ class Map extends React.Component {
   }
 
   componentDidUpdate() {
-    const mapOptions = {
-      center: this.props.center, // this is SF
-      zoom: 13
-    };
-    this.map = new google.maps.Map(this.mapNode, mapOptions);
+    this.map.panTo(this.props.center)
   }
 
   registerListeners() {
@@ -33,9 +29,7 @@ class Map extends React.Component {
   }
 
   handleClick(coords) {
-    this.props.history.push({
-      search: `lat=${coords.lat}&lng=${coords.lng}`
-    });
+    this.props.eventAddress(coords);
   }
 
   render() {

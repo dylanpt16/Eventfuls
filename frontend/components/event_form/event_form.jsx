@@ -7,12 +7,14 @@ import EventMapContainer from '../event_map/event_map_container';
 class EventForm extends React.Component {
   constructor(props) {
     super(props);
+    this.coords = {};
     this.state = {
       name: '',
       description: '',
-      owner_id: this.props.currentUser.id
+      owner_id: this.props.currentUser.id,
     }
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.eventAddress = this.eventAddress.bind(this);
   }
 
   update(field) {
@@ -21,9 +23,13 @@ class EventForm extends React.Component {
     });
   }
 
+  eventAddress(address) {
+    this.coords = address
+  }
+
   handleSubmit(e) {
     e.preventDefault();
-    const event = this.state;
+    const event = Object.assign({}, this.state, this.coords);
     this.props.createEvent({event});
   }
 
@@ -36,7 +42,9 @@ class EventForm extends React.Component {
           <h3 className="new-event-title">Create A Event!</h3>
 
           <form onSubmit={this.handleSubmit}>
-            <EventMapContainer />
+            <EventMapContainer
+              eventAddress={this.eventAddress}
+            />
             <label className="event-field">Name</label>
             <input
               type="textarea"

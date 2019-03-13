@@ -38,7 +38,10 @@ class EventMap extends React.Component {
         <button
           onClick={this.handleSubmit}
           className="map-search-button">Go</button>
-        <Map center={this.props.center} />
+        <Map
+          center={this.props.center}
+          eventAddress={this.props.eventAddress}
+        />
       </div>
     )
   }
