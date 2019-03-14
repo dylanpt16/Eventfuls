@@ -28,20 +28,24 @@ class EventMap extends React.Component {
 
   render() {
     return (
-      <div>
-        <input
-          type="text"
-          placeholder="Your Adress"
-          onChange={this.update('location')}
-          className="map-input"
-        />
-        <button
-          onClick={this.handleSubmit}
-          className="map-search-button">Go</button>
-        <Map
-          center={this.props.center}
-          eventAddress={this.props.eventAddress}
-        />
+      <div className="map-search-container">
+        <div className="map-search-form">
+          <input
+            type="text"
+            placeholder="Your Adress"
+            onChange={this.update('location')}
+            className="map-search-input"
+          />
+          <button
+            onClick={this.handleSubmit}
+            className="map-search-button">Go</button>
+        </div>
+        <div className="map-container">
+          <Map
+            center={this.props.center}
+            eventAddress={this.props.eventAddress}
+          />
+        </div>
       </div>
     )
   }

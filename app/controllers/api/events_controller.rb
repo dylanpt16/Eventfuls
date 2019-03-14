@@ -3,7 +3,11 @@ class Api::EventsController < ApplicationController
 
   def create
     @event = Event.create!(event_params)
-    render :show
+    if @event
+      render :show
+    else
+      render json: ["Please select location on the map"], status: 422
+    end
   end
 
   def show
@@ -21,6 +25,9 @@ class Api::EventsController < ApplicationController
       :name,
       :description,
       :owner_id,
+      :lat,
+      :lng,
+      :picture_url
     )
   end
 end

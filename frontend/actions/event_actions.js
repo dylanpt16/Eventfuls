@@ -3,6 +3,7 @@ import * as APIUtil from '../util/event_api_util';
 export const RECEIVE_EVENTS = 'RECEIVE_EVENTS';
 export const RECEIVE_EVENT = 'RECEIVE_EVENT';
 export const RECEIVE_LOCATION = 'RECEIVE_LOCATION';
+export const RECEIVE_EVENT_ERRORS = 'RECEIVE_EVENT_ERRORS';
 
 export const receiveEvents = events => ({
   type: RECEIVE_EVENTS,
@@ -12,6 +13,11 @@ export const receiveEvents = events => ({
 export const receiveEvent = event => ({
   type: RECEIVE_EVENT,
   event
+});
+
+export const receiveErrors = errors => ({
+  type: RECEIVE_EVENT_ERRORS,
+  errors
 });
 
 export const receiveLocation = currentLocation=> ({
@@ -33,7 +39,8 @@ export const fetchEvent = (id) => dispatch => (
 
 export const createEvent = event => dispatch => (
   APIUtil.createEvent(event).then(
-    event => (dispatch(receiveEvent(event)))
+    event => (dispatch(receiveEvent(event))),
+    errors => (dispatch(receiveErrors(errors.responseJSON)))
   )
 );
 

@@ -128,3 +128,6 @@ node_modules/
 *.swp
 *.swo
 *.swn
+
+# Ignore application configuration
+/config/application.yml
