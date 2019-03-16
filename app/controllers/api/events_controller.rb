@@ -2,11 +2,12 @@ class Api::EventsController < ApplicationController
   before_action :require_logged_in, only: [:create]
 
   def create
-    @event = Event.create!(event_params)
-    if @event
+    @event = Event.new(event_params)
+
+    if @event.save
       render :show
     else
-      render json: ["Please select location on the map"], status: 422
+      render json: ["Please fill in all required field!"], status: 422
     end
   end
 
