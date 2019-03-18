@@ -2,16 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { withRouter } from 'react-router-dom';
 
+import MarkerManager from '../../util/marker_manager';
+
 const getCoordsObj = latLng => ({
   lat: latLng.lat(),
   lng: latLng.lng()
 });
 
 class Map extends React.Component {
+  constructor(props){
+    super(props);
+    this.marker = [];
+  }
+
   componentDidMount() {
     const mapOptions = {
       center: this.props.center, // this is SF
-      zoom: 13
+      zoom: 15
     };
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.registerListeners();
@@ -29,6 +36,15 @@ class Map extends React.Component {
   }
 
   handleClick(coords) {
+    const newMarker = new google.maps.Marker({
+      position: coords,
+    });
+    if (this.marker.length) {
+      this.marker[0].setMap(null);
+      this.marker.pop();
+    }
+    this.marker.push(newMarker);
+    newMarker.setMap(this.map);
     this.props.eventAddress(coords);
   }
 

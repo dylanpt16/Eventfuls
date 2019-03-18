@@ -2,6 +2,13 @@
 }
 
 .new-event-title {
+  font-size: 45px;
+  text-align: center;
+}
+
+.new-event-form-errors {
+  color: red;
+  font-weight: bold;
   font-size: 30px;
   text-align: center;
 }
@@ -11,10 +18,12 @@
   padding: 10px;
 }
 
+.new-event-form > hr {
+  width: 50%;
+}
+
 .map-search-container {
   margin: auto;
-  width: 50%;
-  border-top: 3px solid #E5E5E5;
   padding: 10px;
   text-align: center;
 }
@@ -27,12 +36,6 @@
   background: #fafafa;
 }
 
-.map-container {
-  margin: 15px auto;
-  width: 510px;
-  height: 510px;
-}
-
 .map-search-button {
   background: #d01031;
   font-weight: bold;
@@ -40,6 +43,13 @@
   padding: 8px 15px;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.map {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  margin: auto;
 }
 
 .map-search-form {

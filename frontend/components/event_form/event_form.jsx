@@ -44,6 +44,18 @@ class EventForm extends React.Component {
     this.props.createEvent({event});
   }
 
+  renderErrors() {
+    return(
+      <ul className="new-event-form-errors">
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
   render() {
     const { name, description } = this.state;
 
@@ -51,6 +63,8 @@ class EventForm extends React.Component {
       <div className="new-event-container">
         <div className="new-event-form">
           <h3 className="new-event-title">Create A Event!</h3>
+          { this.renderErrors() }
+          <hr />
           <EventMapContainer
             eventAddress={this.eventAddress}
           />

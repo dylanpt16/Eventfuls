@@ -13,7 +13,3 @@ User.create({username: 'guest3', password: "foobar"})
 Group.create({name: 'Seattle Coder', description: 'A group of Software Engineers in Seattle', host_id: 1, lat: '47.614159', lng: '-122.3258383'})
 Group.create({name: 'Seattle Web Developer', description: 'A group of Web Developer in Seattle', host_id: 2, lat: '47.614150', lng: '-122.3258384'})
 Group.create({name: 'Web Developer', description: 'A group of Web Developer', host_id: 1, lat: '47.614157', lng: '-122.3258884'})
-
-Membership.create({user_id: 2, group_id:1})
-Membership.create({user_id: 3, group_id:1})
-Membership.create({user_id: 1, group_id:2})

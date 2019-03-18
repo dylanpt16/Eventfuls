@@ -7,7 +7,11 @@ class Api::EventsController < ApplicationController
     if @event.save
       render :show
     else
-      render json: ["Please fill in all required field!"], status: 422
+      if (@event.errors.messages.delete :lat) && (@event.errors.messages.delete :lng)
+        @event.errors.messages[:location] = ["can't be blank"]
+      end
+      @event.errors.messages[:picture] = @event.errors.messages.delete :picture_url
+      render json: @event.errors.full_messages, status: 422
     end
   end
 
