@@ -1,4 +1,6 @@
 .new-event-container {
+  position: relative;
+  top: 100px;
 }
 
 .new-event-title {
@@ -14,8 +16,12 @@
 }
 
 .new-event-form {
-  margin: 30px;
+  width: 40%;
+  background: rgba(255, 255, 255, 0.8);
+  margin: auto;
   padding: 10px;
+  position: relative;
+  z-index: 100;
 }
 
 .new-event-form > hr {
@@ -70,6 +76,15 @@
   border-radius: 5px;
   padding: 10px 40px;
   background: #fafafa;
+}
+
+.event-field:focus {
+  background: white;
+  border: 2px solid #d01031;
+}
+
+textarea.event-field {
+  height: 100px;
 }
 
 .new-event-button {

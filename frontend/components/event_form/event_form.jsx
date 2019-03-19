@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 
 import EventMapContainer from '../event_map/event_map_container';
+import Video from '../video/video';
 
 class EventForm extends React.Component {
   constructor(props) {
@@ -61,6 +62,8 @@ class EventForm extends React.Component {
 
     return (
       <div className="new-event-container">
+        <Video />
+
         <div className="new-event-form">
           <h3 className="new-event-title">Create A Event!</h3>
           { this.renderErrors() }
@@ -85,6 +88,7 @@ class EventForm extends React.Component {
               value={description}
               onChange={this.update('description')}
               className="event-field"
+              placeholder="for example: This meetup group is for who wants to join the IT industry but has zero or very little basic knowledge"
             ></textarea>
             <br/>
             <div className="button-holder">

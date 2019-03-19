@@ -30,6 +30,8 @@ class EventMap extends React.Component {
     return (
       <div className="map-search-container">
         <div className="map-search-form">
+          <label className="event-field-label">Please select Event's location on map</label>
+          <br />
           <input
             type="text"
             placeholder="Your Adress"
