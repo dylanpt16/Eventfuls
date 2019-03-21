@@ -9,10 +9,24 @@
   position: fixed;
 }
 
+.left-header {
+  position: relative;
+  display: flex;
+}
+
+.left-header > a {
+  margin: auto 5px;
+}
+
 .logo {
   font-size: 35px;
   width: auto;
   font-family: 'Sedgwick Ave', cursive;
   color: #d01031;
   padding: 10px;
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
 }
