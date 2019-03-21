@@ -19,6 +19,12 @@ class EventForm extends React.Component {
     this.handleCloudinary = this.handleCloudinary.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (!nextProps.errors.length) {
+      this.props.history.push('/');
+    }
+  }
+
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value

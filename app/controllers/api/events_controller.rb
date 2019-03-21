@@ -10,7 +10,7 @@ class Api::EventsController < ApplicationController
       if (@event.errors.messages.delete :lat) && (@event.errors.messages.delete :lng)
         @event.errors.messages[:location] = ["can't be blank"]
       end
-      @event.errors.messages[:picture] = @event.errors.messages.delete :picture_url
+      @event.errors.messages.delete :picture_url if @event.errors.messages[:picture]
       render json: @event.errors.full_messages, status: 422
     end
   end
