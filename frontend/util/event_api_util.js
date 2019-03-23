@@ -13,6 +13,14 @@ export const fetchEvent = id => (
   })
 );
 
+export const fetchEvents = data => (
+  $.ajax({
+    method: 'GET',
+    url: '/api/events',
+    data
+  })
+);
+
 export const fetchLocation = location=> (
   $.ajax({
     method: 'GET',

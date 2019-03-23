@@ -21,7 +21,7 @@ class EventForm extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (!nextProps.errors.length) {
-      this.props.history.push('/');
+      this.props.history.push(`/events/${7}`);
     }
   }
 

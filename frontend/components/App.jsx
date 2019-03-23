@@ -9,6 +9,7 @@ import {
 import HeaderLinks from './header_links/header_links';
 import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session_form/session_form_container';
+import FrontPage from './front_page/front_page';
 import EventFormContainer from './event_form/event_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -19,6 +20,7 @@ const App = () => (
       <GreetingContainer />
     </header>
     <Switch>
+      <Route exact path="/" component={FrontPage} />
       <AuthRoute path="/login" component={SessionFormContainer} />
       <AuthRoute path="/signup" component={SessionFormContainer} />
       <ProtectedRoute path="/events/new" component={EventFormContainer} />
