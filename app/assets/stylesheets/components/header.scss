@@ -1,12 +1,12 @@
-.header {
+.page-header {
   display: flex;
   padding: 16px 16px 8px;
   justify-content: space-between;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  height: 70px;
   width: 100%;
   z-index: 110;
   background: white;
-  position: fixed;
 }
 
 .logo {

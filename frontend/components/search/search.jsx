@@ -1,10 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 
-import Map from './map';
+import Map from '../event_map/map';
 
-class EventMap extends React.Component {
+class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -44,12 +43,12 @@ class EventMap extends React.Component {
         <div className="map-container">
           <Map
             center={this.props.center}
-            eventAddress={this.props.eventAddress}
+            updateFilter={this.props.updateFilter}
           />
         </div>
       </div>
-    )
-  }
+    );
+  };
 }
 
-export default withRouter(EventMap);
+export default withRouter(Search);

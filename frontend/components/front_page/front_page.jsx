@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router';
 
 import SlideShow from './slideshow';
+import SearchContainer from '../search/search_container';
 
 class FrontPage extends React.Component {
   constructor(props) {
@@ -15,9 +16,11 @@ class FrontPage extends React.Component {
 
   render() {
     return (
-      <div className="slideshow-container">
-        <h1>Eventfuls</h1>
-        <SlideShow />
+      <div className="front-page">
+        <div className="slideshow-container">
+          <SlideShow />
+        </div>
+        <SearchContainer />
       </div>
     );
   }

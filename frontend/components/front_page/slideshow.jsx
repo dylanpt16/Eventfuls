@@ -24,6 +24,7 @@ class SlideShow extends React.Component {
   render(){
     return (
       <div id="slideshow">
+        <h1 className="slideshow-logo">Eventfuls</h1>
         <div className="slide-border">
           <img
             className="slide-image"

@@ -15,12 +15,12 @@ class Api::EventsController < ApplicationController
     end
   end
 
-  def show
+  def index
     @events = bounds ? Event.in_bounds(bounds) : Event.all
   end
 
-  def index
-    @events = Event.all
+  def show
+    @event = Event.find(params[:id])
   end
 
   private
@@ -34,5 +34,9 @@ class Api::EventsController < ApplicationController
       :lng,
       :picture_url
     )
+  end
+
+  def bounds
+    params[:bounds]
   end
 end

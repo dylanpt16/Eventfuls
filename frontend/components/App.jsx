@@ -14,17 +14,19 @@ import EventFormContainer from './event_form/event_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
-  <div>
-    <header className="header">
+  <div className="page">
+    <div className="page-header">
       <HeaderLinks />
       <GreetingContainer />
-    </header>
-    <Switch>
-      <Route exact path="/" component={FrontPage} />
-      <AuthRoute path="/login" component={SessionFormContainer} />
-      <AuthRoute path="/signup" component={SessionFormContainer} />
-      <ProtectedRoute path="/events/new" component={EventFormContainer} />
-    </Switch>
+    </div>
+    <div className="page-content">
+      <Switch>
+        <Route exact path="/" component={FrontPage} />
+        <AuthRoute path="/login" component={SessionFormContainer} />
+        <AuthRoute path="/signup" component={SessionFormContainer} />
+        <ProtectedRoute path="/events/new" component={EventFormContainer} />
+      </Switch>
+    </div>
   </div>
 );
 

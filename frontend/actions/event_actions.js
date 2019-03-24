@@ -25,8 +25,8 @@ export const receiveLocation = currentLocation=> ({
   currentLocation
 })
 
-export const fetchEvents = () => dispatch => (
-  APIUtil.fetchEvents().then(
+export const fetchEvents = (filters) => dispatch => (
+  APIUtil.fetchEvents(filters).then(
     events => (dispatch(receiveEvents(events)))
   )
 );
