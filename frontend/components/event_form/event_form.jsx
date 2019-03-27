@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 
-import EventMapContainer from '../event_map/event_map_container';
+import EventMapContainer from './event_map_container';
 import Video from '../video/video';
 
 class EventForm extends React.Component {
@@ -21,7 +21,7 @@ class EventForm extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (!nextProps.errors.length) {
-      this.props.history.push(`/events/${7}`);
+      this.props.history.push(`/`);
     }
   }
 

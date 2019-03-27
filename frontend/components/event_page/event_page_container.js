@@ -1,12 +1,16 @@
 import { connect } from 'react-redux';
 
-const mapStateToProps = (state) => ({
-});
+import { selectEvent } from '../../reducers/selectors';
+import EventPage from './event_page';
 
-const mapDispatchToProps = (dispatch) => ({
-});
+const mapStateToProps = (state, { match }) => {
+  const event = selectEvent(state.entities, match.params.eventId);
+  return {
+    event
+  };
+};
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  null
 )(EventPage)

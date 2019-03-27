@@ -4,6 +4,11 @@ import { withRouter } from 'react-router';
 
 class EventPage extends React.Component {
   constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    debugger
   }
 
   render() {

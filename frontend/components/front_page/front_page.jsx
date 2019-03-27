@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router';
 
 import SlideShow from './slideshow';
-import SearchContainer from '../search/search_container';
+import SearchContainer from './search_container';
 
 class FrontPage extends React.Component {
   constructor(props) {

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 
-import Map from './map';
+import Map from '../event_map/map';
 
 class EventMap extends React.Component {
   constructor(props) {
