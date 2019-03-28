@@ -1,16 +1,25 @@
 import { connect } from 'react-redux';
-import { createEvent } from '../../actions/event_actions';
 
+import { createEvent } from '../../actions/event_actions';
+import { createGroup } from '../../actions/group_actions';
 import EventForm from './event_form';
 
-const mapStateToProps = (state) => ({
-  currentUser: state.session.currentUser,
-  errors: state.errors.event
-})
+const mapStateToProps = (state, { location }) => {
+  const formType = location.pathname.slice(1);
+  return ({
+    currentUser: state.session.currentUser,
+    errors: (formType === 'group') ? state.errors.group : state.errors.event
+  });
+};
 
-const mapDispatchToProps = (dispatch) => ({
-  createEvent: event => dispatch(createEvent(event))
-})
+const mapDispatchToProps = (dispatch, { location }) => {
+  const formType = location.pathname.slice(1);
+  const processForm = (formType === 'group') ? createGroup : createEvent;
+  return {
+    processForm: data => dispatch(processForm(data)),
+    formType
+  };
+};
 
 export default connect(
   mapStateToProps,

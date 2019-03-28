@@ -25,7 +25,8 @@ const App = () => (
         <Route exact path="/" component={FrontPage} />
         <AuthRoute path="/login" component={SessionFormContainer} />
         <AuthRoute path="/signup" component={SessionFormContainer} />
-        <ProtectedRoute path="/events/new" component={EventFormContainer} />
+        <ProtectedRoute path="/event" component={EventFormContainer} />
+        <ProtectedRoute path="/group" component={EventFormContainer} />
         <Route path="/events/:eventId" component={EventPageContainer} />
       </Switch>
     </div>

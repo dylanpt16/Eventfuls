@@ -2,8 +2,15 @@ class Api::GroupsController < ApplicationController
   before_action :require_logged_in, only: [:create]
 
   def create
-    @group = Group.create!(group_params)
-    render :show
+    @group = Group.new(group_params)
+
+    if !@group.save
+      if (@group.errors.messages.delete :lat) && (@group.errors.messages.delete :lng)
+        @group.errors.messages[:location] = ["can't be blank"]
+      end
+      @group.errors.messages.delete :picture_url if @group.errors.messages[:picture]
+      render json: @group.errors.full_messages, status: 422
+    end
   end
 
   def show
@@ -20,9 +27,10 @@ class Api::GroupsController < ApplicationController
     params.require(:group).permit(
       :name,
       :description,
-      :host_id,
+      :owner_id,
       :lat,
-      :lng
+      :lng,
+      :picture_url
     )
   end
 

@@ -47,8 +47,13 @@ class EventForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const event = Object.assign({}, this.state, this.coords);
-    this.props.createEvent({event});
+    if (this.props.formType === 'group') {
+      const group = Object.assign({}, this.state, this.coords);
+      this.props.processForm({group});
+    }else {
+      const event = Object.assign({}, this.state, this.coords);
+      this.props.processForm({event});
+    }
   }
 
   renderErrors() {
@@ -65,20 +70,22 @@ class EventForm extends React.Component {
 
   render() {
     const { name, description } = this.state;
+    const formType = this.props.formType;
 
     return (
       <div className="new-event-container">
         <Video />
 
         <div className="new-event-form">
-          <h3 className="new-event-title">Create A Event!</h3>
+          <h3 className="new-event-title">Create A {formType}!</h3>
           { this.renderErrors() }
           <hr />
           <EventMapContainer
+            formType={formType}
             eventAddress={this.eventAddress}
           />
           <div className="event-input-container">
-            <label className="event-field-label">What will your Event's name be?</label>
+            <label className="event-field-label">What will your {formType}'s name be?</label>
             <br />
             <input
               type="text"
@@ -88,7 +95,7 @@ class EventForm extends React.Component {
               placeholder="for example: Seattle Coders"
             />
             <br />
-            <label className="event-field-label">Describe your Event</label>
+            <label className="event-field-label">Describe your {formType}</label>
             <br />
             <textarea
               value={description}
@@ -102,7 +109,7 @@ class EventForm extends React.Component {
                 onClick={this.handleCloudinary}
                 className="new-event-button"
               >
-                Add Event Picture
+                Add {formType} Picture
               </button>
             </div>
             <div className="button-holder">

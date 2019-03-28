@@ -26,10 +26,12 @@ class EventMap extends React.Component {
   }
 
   render() {
+    const formType = this.props.formType;
+
     return (
       <div className="map-search-container">
         <div className="map-search-form">
-          <label className="event-field-label">Please select Event's location on map</label>
+          <label className="event-field-label">Please select {formType}'s location on map</label>
           <br />
           <input
             type="text"
