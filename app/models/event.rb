@@ -5,6 +5,7 @@ class Event < ApplicationRecord
     :lat,
     :lng,
     :picture_url,
+    :date,
     presence: true
   validates :name, uniqueness: true
 

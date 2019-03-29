@@ -1,10 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router';
 
 const navBar = () => (
   <ul className="right-header-guest">
     <li className="create-event-label">
-      <Link to="/events/new">Create New Event</Link>
+      <Link to="/event">Create New Event</Link>
+    </li>
+    <li className="create-group-label">
+      <Link to="/group">Create New Group</Link>
     </li>
     <li className="login-signup">
       <Link to="/login">Login</Link>
@@ -16,7 +20,10 @@ const navBar = () => (
 const welcomeMessage = ({ currentUser, logout }) => (
   <ul className="right-header-logged-in">
     <li className="create-event-label">
-      <Link to="/events/new">Create New Event</Link>
+      <Link to="/event">Create New Event</Link>
+    </li>
+    <li className="create-group-label">
+      <Link to="/group">Create New Group</Link>
     </li>
     <li>
       <hgroup className="header-group">
@@ -31,4 +38,4 @@ const Greeting = ({ currentUser, logout }) => (
   currentUser ? welcomeMessage({ currentUser, logout }) : navBar()
 );
 
-export default Greeting;
+export default withRouter(Greeting);

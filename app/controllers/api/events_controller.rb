@@ -32,7 +32,8 @@ class Api::EventsController < ApplicationController
       :owner_id,
       :lat,
       :lng,
-      :picture_url
+      :picture_url,
+      :date
     )
   end
 

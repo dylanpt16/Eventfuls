@@ -1,6 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
+import moment from 'moment';
+
 class EventIndexItem extends React.Component {
   constructor(props) {
     super(props);
@@ -13,17 +15,18 @@ class EventIndexItem extends React.Component {
   }
 
   render() {
-    const {name, description, picture_url } = this.props.event;
+    const {name, description, picture_url, date } = this.props.event;
     return (
       <div
         className="event-index-item"
         onClick={this.handleClick}
       >
         <div className="index-item-info">
-          <span className="index-item-category">Name:</span>
-          <span className="index-item-copy">{name}</span>
-          <span className="index-item-category">Description:</span>
-          <span className="index-item-copy">{description}</span>
+          <span className="index-item-name">{name}</span>
+          <br />
+          <span className="index-item-copy">
+            { moment(date).format("YYYY-MM-DD HH:mm:ss") }
+          </span>
           <img src={picture_url}/>
         </div>
       </div>

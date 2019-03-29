@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 
+import Datetime from 'react-datetime';
 import EventMapContainer from './event_map_container';
 import Video from '../video/video';
 
@@ -13,10 +14,12 @@ class EventForm extends React.Component {
       name: '',
       description: '',
       owner_id: this.props.currentUser.id,
+      date: new Date(),
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.eventAddress = this.eventAddress.bind(this);
     this.handleCloudinary = this.handleCloudinary.bind(this);
+    this.renderDate = this.renderDate.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -53,6 +56,19 @@ class EventForm extends React.Component {
     }else {
       const event = Object.assign({}, this.state, this.coords);
       this.props.processForm({event});
+    }
+  }
+
+  renderDate() {
+    if (this.props.formType === 'event') {
+      return(
+        <div>
+          <label className="event-field-label">Event's Time</label>
+          <Datetime
+            onChange={date => this.setState({date: date.toDate()})}
+          />
+        </div>
+      );
     }
   }
 
@@ -103,6 +119,7 @@ class EventForm extends React.Component {
               className="event-field"
               placeholder="for example: This meetup group is for who wants to join the IT industry but has zero or very little basic knowledge"
             ></textarea>
+            { this.renderDate() }
             <br/>
             <div className="button-holder">
               <button
