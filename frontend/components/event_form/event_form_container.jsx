@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 
 import { createEvent } from '../../actions/event_actions';
 import { createGroup } from '../../actions/group_actions';
+import { fetchLocation } from '../../actions/event_actions';
 import EventForm from './event_form';
 
 const mapStateToProps = (state, { location }) => {
@@ -17,6 +18,7 @@ const mapDispatchToProps = (dispatch, { location }) => {
   const processForm = (formType === 'group') ? createGroup : createEvent;
   return {
     processForm: data => dispatch(processForm(data)),
+    fetchLocation: location => dispatch(fetchLocation(location)),
     formType
   };
 };

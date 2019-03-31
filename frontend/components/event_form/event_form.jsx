@@ -99,6 +99,7 @@ class EventForm extends React.Component {
           <EventMapContainer
             formType={formType}
             eventAddress={this.eventAddress}
+            fetchLocation={this.props.fetchLocation}
           />
           <div className="event-input-container">
             <label className="event-field-label">What will your {formType}'s name be?</label>

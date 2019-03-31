@@ -7,11 +7,7 @@ const mapStateToProps = (state) => ({
   center: state.location
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  fetchLocation: location => dispatch(fetchLocation(location))
-})
-
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  null
 )(EventMap)

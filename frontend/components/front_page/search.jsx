@@ -1,8 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 
-import Map from '../event_map/map';
 import EventIndex from './event_index';
+import EventMap from '../event_form/event_map';
 
 class Search extends React.Component {
   constructor(props) {
@@ -29,25 +29,11 @@ class Search extends React.Component {
     return (
       <div className="map-search-container-front-page">
         <div className="map-search-left">
-          <div className="map-search-form">
-            <label className="event-field-label">Please select Event's location on map</label>
-            <br />
-            <input
-              type="text"
-              placeholder="Your Adress"
-              onChange={this.update('location')}
-              className="map-search-input"
-            />
-            <button
-              onClick={this.handleSubmit}
-              className="map-search-button">Go</button>
-          </div>
-          <div className="map-container">
-            <Map
-              center={this.props.center}
-              updateFilter={this.props.updateFilter}
-            />
-          </div>
+          <EventMap
+            center={this.props.center}
+            updateFilter={this.props.updateFilter}
+            fetchLocation={this.props.fetchLocation}
+          />
         </div>
         <div className="map-search-right">
           <EventIndex
