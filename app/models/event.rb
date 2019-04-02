@@ -9,6 +9,12 @@ class Event < ApplicationRecord
     presence: true
   validates :name, uniqueness: true
 
+  has_many :attendances
+
+  has_many :attendees,
+    through: :attendances,
+    source: :user
+
   def self.in_bounds(bounds)
     self.where("lat < ?", bounds[:northEast][:lat])
       .where("lat > ?", bounds[:southWest][:lat])

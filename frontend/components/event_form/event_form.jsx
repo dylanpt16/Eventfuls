@@ -13,7 +13,6 @@ class EventForm extends React.Component {
     this.state = {
       name: '',
       description: '',
-      owner_id: this.props.currentUser.id,
       date: new Date(),
     }
     this.handleSubmit = this.handleSubmit.bind(this);

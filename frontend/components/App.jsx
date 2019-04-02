@@ -11,7 +11,7 @@ import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session_form/session_form_container';
 import FrontPage from './front_page/front_page';
 import EventFormContainer from './event_form/event_form_container';
-import EventPageContainer from './event_page/event_page_container';
+import EventShowContainer from './event_show/event_show_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
@@ -27,7 +27,7 @@ const App = () => (
         <AuthRoute path="/signup" component={SessionFormContainer} />
         <ProtectedRoute path="/event" component={EventFormContainer} />
         <ProtectedRoute path="/group" component={EventFormContainer} />
-        <Route path="/events/:eventId" component={EventPageContainer} />
+        <ProtectedRoute  path="/events/:eventId" component={EventShowContainer} />
       </Switch>
     </div>
   </div>

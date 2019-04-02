@@ -14,7 +14,8 @@ const eventsReducer = (state = {}, action) => {
       return action.events;
     case RECEIVE_EVENT:
       const newEvent = {[action.event.id]: action.event};
-      return merge({}, state, newEvent);
+      delete newState[action.event.id]
+      return merge({}, newState, newEvent);
     default:
       return state;
   }

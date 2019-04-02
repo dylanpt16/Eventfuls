@@ -3,6 +3,7 @@ class Api::EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
+    @event.owner_id = current_user.id
 
     if @event.save
       render :show
@@ -29,7 +30,6 @@ class Api::EventsController < ApplicationController
     params.require(:event).permit(
       :name,
       :description,
-      :owner_id,
       :lat,
       :lng,
       :picture_url,

@@ -12,6 +12,11 @@ class User < ApplicationRecord
   has_many :groups,
     through: :memberships
 
+  has_many :attendances
+
+  has_many :events, 
+    through: :attendances
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     return nil unless user
