@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 
+import MarkerManager from '../../util/marker_manager';
+
 const getCoordsObj = latLng => ({
   lat: latLng.lat(),
   lng: latLng.lng()
@@ -24,13 +26,20 @@ class EventMap extends React.Component {
     const obj = Object.assign({}, this.state);
     delete obj.location;
     this.map = new google.maps.Map(map, this.state);
+    this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this))
     this.registerListeners();
+    if(this.props.updateFilter) {
+      this.MarkerManager.updateMarkers(this.props.events);
+    }
   }
 
   componentDidUpdate() {
     if(this.state.center !== this.props.center) {
       this.map.panTo(this.props.center)
       this.setState({ center: this.props.center})
+    }
+    if(this.props.updateFilter) {
+      this.MarkerManager.updateMarkers(this.props.events);
     }
   }
 
@@ -50,6 +59,10 @@ class EventMap extends React.Component {
         this.handleClick(coords);
       });
     }
+  }
+
+  handleMarkerClick(event) {
+    this.props.history.push(`events/${event.id}`);
   }
 
   handleClick(coords) {

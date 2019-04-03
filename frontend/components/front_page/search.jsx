@@ -33,6 +33,7 @@ class Search extends React.Component {
             center={this.props.center}
             updateFilter={this.props.updateFilter}
             fetchLocation={this.props.fetchLocation}
+            events={this.props.events}
           />
         </div>
         <div className="map-search-right">
