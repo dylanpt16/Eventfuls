@@ -2,19 +2,19 @@
   display: flex;
   height: 700px;
   overflow: hidden;
-  margin: auto;
-  padding: 10px;
+  margin: 10px 30px;
   text-align: center;
 }
 
 .map-search-left {
-  width: 40%;
+  flex: 2;
+  height: 100%;
   margin: auto;
 }
 
 .map-search-right {
+  flex: 4;
   overflow-y: hidden;
-  width: 60%;
   height: 100%;
 }
 
@@ -37,7 +37,7 @@
   overflow: auto;
 }
 
-.event-index-item {
+.event-index-item, .group-index-item {
   width: 400px;
   height: 300px;
 }

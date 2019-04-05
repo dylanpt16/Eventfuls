@@ -9,7 +9,7 @@ const getCoordsObj = latLng => ({
   lng: latLng.lng()
 });
 
-class EventMap extends React.Component {
+class Map extends React.Component {
   constructor(props) {
     super(props);
     this.markers = [];
@@ -29,7 +29,7 @@ class EventMap extends React.Component {
     this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this))
     this.registerListeners();
     if(this.props.updateFilter) {
-      this.MarkerManager.updateMarkers(this.props.events);
+      this.props.eventSelected ? this.MarkerManager.updateMarkers(this.props.events) : this.MarkerManager.updateMarkers(this.props.groups);
     }
   }
 
@@ -39,7 +39,7 @@ class EventMap extends React.Component {
       this.setState({ center: this.props.center})
     }
     if(this.props.updateFilter) {
-      this.MarkerManager.updateMarkers(this.props.events);
+      this.props.eventSelected ? this.MarkerManager.updateMarkers(this.props.events) : this.MarkerManager.updateMarkers(this.props.groups);
     }
   }
 
@@ -62,7 +62,7 @@ class EventMap extends React.Component {
   }
 
   handleMarkerClick(event) {
-    this.props.history.push(`events/${event.id}`);
+    this.props.eventSelected ? this.props.history.push(`events/${event.id}`) : this.props.history.push(`groups/${group.id}`);
   }
 
   handleClick(coords) {
@@ -113,4 +113,4 @@ class EventMap extends React.Component {
   }
 }
 
-export default withRouter(EventMap);
+export default withRouter(Map);

@@ -3,8 +3,11 @@ class Api::GroupsController < ApplicationController
 
   def create
     @group = Group.new(group_params)
+    @group.owner_id = current_user.id
 
-    if !@group.save
+    if @group.save
+      render :show
+    else
       if (@group.errors.messages.delete :lat) && (@group.errors.messages.delete :lng)
         @group.errors.messages[:location] = ["can't be blank"]
       end
@@ -27,7 +30,6 @@ class Api::GroupsController < ApplicationController
     params.require(:group).permit(
       :name,
       :description,
-      :owner_id,
       :lat,
       :lng,
       :picture_url

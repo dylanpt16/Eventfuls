@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 
 import Datetime from 'react-datetime';
-import EventMapContainer from './event_map_container';
+import MapContainer from '../map/map_container';
 import Video from '../video/video';
 
 class EventForm extends React.Component {
@@ -95,7 +95,7 @@ class EventForm extends React.Component {
           <h3 className="new-event-title">Create A {formType}!</h3>
           { this.renderErrors() }
           <hr />
-          <EventMapContainer
+          <MapContainer
             formType={formType}
             eventAddress={this.eventAddress}
             fetchLocation={this.props.fetchLocation}

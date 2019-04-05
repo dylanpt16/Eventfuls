@@ -19,8 +19,8 @@ export const receiveErrors = errors => ({
   errors
 });
 
-export const fetchGroups = () => dispatch => (
-  APIUtil.fetchGroups().then(
+export const fetchGroups = (filters) => dispatch => (
+  APIUtil.fetchGroups(filters).then(
     groups => (dispatch(receiveGroups(groups)))
   )
 );

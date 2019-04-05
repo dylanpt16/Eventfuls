@@ -43,17 +43,3 @@ export const destroyAttendance = event_id => (
     data: { event_id }
   })
 );
-
-export const fetchAttendances = () => (
-  $.ajax({
-    method: 'GET',
-    url: 'api/attendances'
-  })
-);
-
-export const fetchAttendance = (id) => (
-  $.ajax({
-    method: 'GET',
-    url: `api/attendances/${id}`
-  })
-);

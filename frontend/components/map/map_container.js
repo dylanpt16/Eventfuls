@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { fetchLocation } from '../../actions/event_actions';
 
-import EventMap from './event_map';
+import Map from './map';
 
 const mapStateToProps = (state) => ({
   center: state.location
@@ -10,4 +10,4 @@ const mapStateToProps = (state) => ({
 export default connect(
   mapStateToProps,
   null
-)(EventMap)
+)(Map)

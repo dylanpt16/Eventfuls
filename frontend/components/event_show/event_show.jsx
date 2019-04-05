@@ -60,7 +60,7 @@ class EventShow extends React.Component {
           </div>
         </div>
         <hr />
-        <div>
+        <div className="event-show-info-bottom">
         </div>
       </div>
     );

@@ -1,0 +1,19 @@
+.event-group-button {
+  display: flex;
+  justify-content: center;
+}
+
+.event-group-button > li {
+  margin: 0 10px;
+}
+
+.event-unselected, .group-unselected {
+}
+
+.event-selected, .group-selected {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.event-unselected:active, .group-unselected:active, .event-selected:active, .group-selected:active {
+  transform: translateY(2px);
+}
