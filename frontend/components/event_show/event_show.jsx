@@ -4,6 +4,7 @@ import { withRouter } from 'react-router';
 
 import moment from 'moment';
 import Datetime from 'react-datetime';
+import CalendarBox from '../../util/calendar_box';
 
 class EventShow extends React.Component {
   constructor(props) {
@@ -54,6 +55,14 @@ class EventShow extends React.Component {
             <br />
             <span className="event-show-time">
               { moment(date).format("HH:mm:ss") }
+            </span>
+            <br />
+            <span className="event-show-date">
+              <CalendarBox
+                day={ moment(date).date() }
+                month={ moment(date).month() }
+                date={ date }
+              />
             </span>
             <br />
             { this.renderJoinButton() }
