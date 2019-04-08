@@ -5,6 +5,7 @@ import { withRouter } from 'react-router';
 import moment from 'moment';
 import Datetime from 'react-datetime';
 import CalendarBox from '../../util/calendar_box';
+import Map from '../map/map';
 
 class EventShow extends React.Component {
   constructor(props) {
@@ -40,10 +41,19 @@ class EventShow extends React.Component {
   }
 
   render() {
-    const {name, description, picture_url, date } = this.props.event;
+    const {
+      name,
+      description,
+      picture_url,
+      date,
+      attendance_count,
+      lat,
+      lng,
+      event_location,
+    } = this.props.event;
 
     return (
-      <div>
+      <div className="event-show-container">
         <div className="event-show-info">
           <div className="event-show-left">
             <img src={picture_url}/>
@@ -65,11 +75,22 @@ class EventShow extends React.Component {
               />
             </span>
             <br />
+            <span className="event-show-people">
+              { attendance_count } people going
+            </span>
+            <br />
             { this.renderJoinButton() }
           </div>
         </div>
-        <hr />
-        <div className="event-show-info-bottom">
+        <div className="event-show-details">
+          <div className="event-show-description">
+            <section>Description</section>
+            <section>{ description }</section>
+          </div>
+          <div className="event-show-map">
+            <section>Description</section>
+            <section>{ description }</section>
+          </div>
         </div>
       </div>
     );

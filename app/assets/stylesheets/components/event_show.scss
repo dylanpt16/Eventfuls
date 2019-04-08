@@ -1,8 +1,6 @@
 .event-show-info {
-  width: 100%;
   display: flex;
   flex-wrap: nowrap;
-  max-width: 1100px;
   height: 400px;
   margin: auto;
 }
@@ -53,4 +51,8 @@
   margin: 7px;
   border-radius: 5px;
   background: red;
+}
+
+.event-show-people {
+  color: red;
 }

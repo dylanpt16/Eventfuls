@@ -28,18 +28,25 @@ class Map extends React.Component {
     this.map = new google.maps.Map(map, this.state);
     this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this))
     this.registerListeners();
-    if(this.props.updateFilter) {
+    if(!!this.props.updateFilter) {
       this.props.eventSelected ? this.MarkerManager.updateMarkers(this.props.events) : this.MarkerManager.updateMarkers(this.props.groups);
     }
   }
 
   componentDidUpdate() {
-    if(this.state.center !== this.props.center) {
-      this.map.panTo(this.props.center)
-      this.setState({ center: this.props.center})
-    }
-    if(this.props.updateFilter) {
-      this.props.eventSelected ? this.MarkerManager.updateMarkers(this.props.events) : this.MarkerManager.updateMarkers(this.props.groups);
+    if(this.props.putMarker){
+      const newMarker = new google.maps.Marker({
+        position: this.props.center,
+        map: this.map
+      });
+    }else{
+      if(this.state.center !== this.props.center) {
+        this.map.panTo(this.props.center)
+        this.setState({ center: this.props.center})
+      }
+      if(this.props.updateFilter) {
+        this.props.eventSelected ? this.MarkerManager.updateMarkers(this.props.events) : this.MarkerManager.updateMarkers(this.props.groups);
+      }
     }
   }
 
