@@ -1,31 +1,26 @@
-.page-header {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-  flex: 0 0 64px;
-  width: 100%;
-  z-index: 110;
-  background: white;
-}
-
-.logo {
-  font-size: 35px;
-  width: auto;
+#navbar-brand {
+  font-size: 30px;
   font-family: 'Sedgwick Ave', cursive;
   color: #d01031;
-  padding: 10px;
 }
 
-.left-header {
-  position: relative;
-  display: flex;
-}
-
-.left-header > a {
-  margin: auto 5px;
-}
-
-.profile-img {
+.profile-icon {
   width: 40px;
   height: 40px;
 }
+
+#icon-lnkd, #icon-gh {
+  padding: 0;
+  margin: 5px 10px 0px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  font-weight: bold;
+  color: red;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  background: red;
+  color: white;
+}
+

@@ -6,7 +6,7 @@ import {
   HashRouter
 } from 'react-router-dom';
 
-import HeaderLinks from './header_links/header_links';
+import HeaderContainer from './header/header_container';
 import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session_form/session_form_container';
 import FrontPage from './front_page/front_page';
@@ -16,13 +16,11 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <div className="page">
-    <div className="page-header">
-      <HeaderLinks />
-      <GreetingContainer />
+    <div className="navbar navbar-default navbar-fixed-top">
+      <HeaderContainer />
     </div>
     <div className="page-content">
       <Switch>
-        <Route exact path="/" component={FrontPage} />
         <AuthRoute path="/login" component={SessionFormContainer} />
         <AuthRoute path="/signup" component={SessionFormContainer} />
         <ProtectedRoute path="/event" component={EventFormContainer} />

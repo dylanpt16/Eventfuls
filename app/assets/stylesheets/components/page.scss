@@ -11,6 +11,10 @@ html, body, .page, main {
   flex-direction: column;
 }
 
+.navbar-fixed-top {
+  position: static;
+}
+
 .page-content {
   overflow-y: scroll;
   overflow-x: hidden;
