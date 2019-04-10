@@ -17,9 +17,7 @@ class FrontPage extends React.Component {
   render() {
     return (
       <div className="front-page">
-        <div className="slideshow-container">
-          <SlideShow />
-        </div>
+        <SlideShow />
         <SearchContainer />
       </div>
     );

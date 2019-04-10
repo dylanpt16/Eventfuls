@@ -12,10 +12,17 @@ html, body, .page, main {
 }
 
 .navbar-fixed-top {
+  margin-bottom: 0;
   position: static;
 }
 
 .page-content {
   overflow-y: scroll;
   overflow-x: hidden;
+  background: #f6f7f8;
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
 }

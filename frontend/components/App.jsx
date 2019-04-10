@@ -9,10 +9,12 @@ import {
 import HeaderContainer from './header/header_container';
 import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session_form/session_form_container';
-import FrontPage from './front_page/front_page';
 import EventFormContainer from './event_form/event_form_container';
 import EventShowContainer from './event_show/event_show_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import SlideShow from './front_page/slideshow';
+import SearchContainer from './front_page/search_container';
+import Footer from './footer/footer';
 
 const App = () => (
   <div className="page">
@@ -20,6 +22,8 @@ const App = () => (
       <HeaderContainer />
     </div>
     <div className="page-content">
+      <Route exact path="/" component={SlideShow} />
+      <Route exact path="/" component={SearchContainer} />
       <Switch>
         <AuthRoute path="/login" component={SessionFormContainer} />
         <AuthRoute path="/signup" component={SessionFormContainer} />
@@ -28,6 +32,8 @@ const App = () => (
         <ProtectedRoute  path="/events/:eventId" component={EventShowContainer} />
       </Switch>
     </div>
+    <Footer />
+
   </div>
 );
 

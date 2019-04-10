@@ -40,7 +40,9 @@ class SessionForm extends React.Component {
       <ul className="session-form-errors">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
-            {error}
+            <h3>
+              {error}
+            </h3>
           </li>
         ))}
       </ul>
@@ -51,12 +53,10 @@ class SessionForm extends React.Component {
     return(
       <div className="session-form-container">
         <form onSubmit={this.handleSubmit} className="session-form-box">
-          <h1 className="session-form-welcome">Welcome to Eventfuls!</h1>
+          <h2 className="session-form-welcome">Welcome to Eventfuls!</h2>
           { this.renderErrors() }
-          <br/>
-          <h1 className="session-form-directions">Enter Your Username and Password</h1>
+          <h2 className="session-form-directions">Enter Your Username and Password</h2>
           <div className="session-form">
-            <br/>
             <input type="text"
               value={this.state.username}
               onChange={this.update('username')}
@@ -71,16 +71,18 @@ class SessionForm extends React.Component {
               className="session-input"
             />
             <br/>
-          <button
-            onClick={this.handleSubmit}
-            className="session-input-submit">{this.props.formType}</button>
+            <button
+              onClick={this.handleSubmit}
+              id="login-btn"
+              className="btn btn-primary btn-lg">{this.props.formType}</button>
           </div>
         </form>
-        <div>
-          <h1>or</h1>
+        <div className="guest-login">
+          <h3>or</h3>
           <button
             onClick={this.guestLogin}
-            className="guest-login-button">Login As Guest</button>
+            id="guest-btn"
+            className="btn btn-primary btn-lg">Login As Guest</button>
         </div>
       </div>
     );

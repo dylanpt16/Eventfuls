@@ -1,0 +1,30 @@
+#slideshow {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  background: #000000;
+}
+
+.slide-border {
+  position: absolute;
+}
+
+.slide-image{
+  width: 160%;
+  height: 500px;
+  object-fit: cover;
+  opacity: .6;
+}
+
+.slideshow-logo {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  font-size: 100px;
+  font-family: 'Sedgwick Ave', cursive;
+  top: 50%;
+  margin-right: -50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

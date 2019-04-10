@@ -52,21 +52,21 @@ class Search extends React.Component {
   render() {
     return (
       <div className="map-search-container-front-page">
-        <div className="map-search-left">
-          <ul className="event-group-button">
-            <li>
-              <button
-                className={this.state.eventSearch ? "event-selected" : "event-unselected"}
-                onClick={this.handleSwitchSearch}
-              >Event</button>
-            </li>
-            <li>
-              <button
-                className={!this.state.eventSearch ? "group-selected" : "group-unselected"}
-                onClick={this.handleSwitchSearch}
-              >Group</button>
-            </li>
-          </ul>
+        <ul className="map-search-switch">
+          <li>
+            <button
+              className={this.state.eventSearch ? "btn btn-secondary btn-lg disabled" : "btn btn-secondary btn-lg active"}
+              onClick={this.handleSwitchSearch}
+            >Event</button>
+          </li>
+          <li>
+            <button
+              className={!this.state.eventSearch ? "btn btn-secondary btn-lg disabled" : "btn btn-secondary btn-lg active"}
+              onClick={this.handleSwitchSearch}
+            >Group</button>
+          </li>
+        </ul>
+        <div className="map-search">
           <Map
             center={this.props.center}
             updateFilter={this.props.updateFilter}
@@ -75,8 +75,6 @@ class Search extends React.Component {
             groups={this.props.groups}
             eventSelected={this.state.eventSearch}
           />
-        </div>
-        <div className="map-search-right">
           {this.renderSelectedSearch()}
         </div>
       </div>

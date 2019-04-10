@@ -9,7 +9,7 @@ const noGroup = () => (
 );
 
 const renderGroup = ({ groups }) => (
-  <div>
+  <div className="map-search-results-container">
     <h1>Groups Around You: </h1>
     <div className="map-search-results">
       {groups.map(group => (
