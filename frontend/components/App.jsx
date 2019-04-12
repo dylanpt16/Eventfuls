@@ -22,18 +22,19 @@ const App = () => (
       <HeaderContainer />
     </div>
     <div className="page-content">
-      <Route exact path="/" component={SlideShow} />
-      <Route exact path="/" component={SearchContainer} />
-      <Switch>
-        <AuthRoute path="/login" component={SessionFormContainer} />
-        <AuthRoute path="/signup" component={SessionFormContainer} />
-        <ProtectedRoute path="/event" component={EventFormContainer} />
-        <ProtectedRoute path="/group" component={EventFormContainer} />
-        <ProtectedRoute  path="/events/:eventId" component={EventShowContainer} />
-      </Switch>
+      <div className="page-container">
+        <Route exact path="/" component={SlideShow} />
+        <Route exact path="/" component={SearchContainer} />
+        <Switch>
+          <AuthRoute path="/login" component={SessionFormContainer} />
+          <AuthRoute path="/signup" component={SessionFormContainer} />
+          <ProtectedRoute path="/event" component={EventFormContainer} />
+          <ProtectedRoute path="/group" component={EventFormContainer} />
+          <ProtectedRoute  path="/events/:eventId" component={EventShowContainer} />
+        </Switch>
+      </div>
+      <Footer />
     </div>
-    <Footer />
-
   </div>
 );
 

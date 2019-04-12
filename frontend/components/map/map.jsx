@@ -19,6 +19,7 @@ class Map extends React.Component {
       location: '',
     }
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.placeMarker = this.placeMarker.bind(this);
   };
 
   componentDidMount() {
@@ -34,20 +35,28 @@ class Map extends React.Component {
   }
 
   componentDidUpdate() {
-    if(this.props.putMarker){
-      const newMarker = new google.maps.Marker({
-        position: this.props.center,
-        map: this.map
-      });
-    }else{
-      if(this.state.center !== this.props.center) {
-        this.map.panTo(this.props.center)
-        this.setState({ center: this.props.center})
-      }
-      if(this.props.updateFilter) {
-        this.props.eventSelected ? this.MarkerManager.updateMarkers(this.props.events) : this.MarkerManager.updateMarkers(this.props.groups);
-      }
+    if(this.props.putMarker) {
+      this.placeMarker(this.map)
+      google.maps.event.clearListeners(this.map, 'idle');
+      google.maps.event.clearListeners(this.map, 'click');
     }
+    if(this.state.center !== this.props.center) {
+      this.map.panTo(this.props.center)
+      this.setState({ center: this.props.center})
+    }
+    if(this.props.updateFilter) {
+      this.props.eventSelected ? this.MarkerManager.updateMarkers(this.props.events) : this.MarkerManager.updateMarkers(this.props.groups);
+    }
+  }
+
+  placeMarker(map) {
+    var myLatLng = this.props.center;
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: 'Hello World!'
+    });
+
   }
 
   registerListeners() {
@@ -96,9 +105,9 @@ class Map extends React.Component {
     this.props.fetchLocation(this.state.location)
   }
 
-  render() {
-    return (
-      <div className="map-search-container">
+  renderSearchBox() {
+    if( !this.props.putMarker ) {
+      return (
         <div className="map-search-form">
           <input
             type="text"
@@ -110,6 +119,14 @@ class Map extends React.Component {
             onClick={this.handleSubmit}
             className="map-search-button">Go</button>
         </div>
+      )
+    }
+  }
+
+  render() {
+    return (
+      <div className="map-search">
+        { this.renderSearchBox() }
         <div className="map-container">
           <div className="map" ref="map">
             Map

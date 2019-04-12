@@ -16,3 +16,5 @@ if current_user
 end
 
 json.attendance_count event.attendees.length
+
+json.host event.host.username

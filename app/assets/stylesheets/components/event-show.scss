@@ -3,15 +3,20 @@
   flex-wrap: nowrap;
   height: 400px;
   margin: auto;
+  max-width: 1170px;
+  background: white;
 }
 
 .event-show-left {
   flex: 3;
+  margin: auto;
+  text-align: center;
+  border-right: 1px solid transparent;
 }
 
 .event-show-left > img {
-  height: 100%;
-  width: 100%;
+  height: 300px;
+  max-width: 500px;
 }
 
 .event-show-right {
@@ -26,9 +31,6 @@
 .event-show-name {
   font-size: 32px;
   font-weight: bold;
-}
-
-.event-show-time {
 }
 
 .attend-button > button.attended {
@@ -55,4 +57,51 @@
 
 .event-show-people {
   color: red;
+}
+
+.row.event-info {
+  padding-top: 30px;
+  height: 400px;
+}
+
+.event-info .img-thumbnail {
+  max-height: 350px;
+  margin: auto;
+}
+
+.time.event-details {
+  background: white;
+  display: flex;
+  padding: 10px;
+}
+
+.time.right.event-details {
+  font-size: 30px;
+  font-weight: bold;
+  width: 100%;
+  justify-content: center;
+}
+
+#event-details-left {
+  height: 400px;
+}
+
+.map-event-details {
+  height: 100%;
+}
+
+#event-info-right {
+  text-align: center;
+  display: flex;
+  height: 100%;
+  vertical-align: middle;
+  flex-direction: column;
+}
+
+#event-info-left {
+  text-align: center;
+}
+
+.row.event-info {
+  border-bottom: 1px solid #f6f7f8;
 }

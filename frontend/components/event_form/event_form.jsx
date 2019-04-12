@@ -95,11 +95,14 @@ class EventForm extends React.Component {
           <h3 className="new-event-title">Create A {formType}!</h3>
           { this.renderErrors() }
           <hr />
-          <MapContainer
-            formType={formType}
-            eventAddress={this.eventAddress}
-            fetchLocation={this.props.fetchLocation}
-          />
+          <div className="event-form-map-container">
+            <MapContainer
+              className="event-form-map"
+              formType={formType}
+              eventAddress={this.eventAddress}
+              fetchLocation={this.props.fetchLocation}
+            />
+          </div>
           <div className="event-input-container">
             <label className="event-field-label">What will your {formType}'s name be?</label>
             <br />

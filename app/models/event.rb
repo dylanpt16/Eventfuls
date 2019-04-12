@@ -15,6 +15,10 @@ class Event < ApplicationRecord
     through: :attendances,
     source: :user
 
+  belongs_to :host,
+    class_name: 'User',
+    foreign_key: :owner_id
+
   def self.in_bounds(bounds)
     self.where("lat < ?", bounds[:northEast][:lat])
       .where("lat > ?", bounds[:southWest][:lat])

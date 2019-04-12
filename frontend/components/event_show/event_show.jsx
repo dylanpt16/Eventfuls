@@ -5,7 +5,8 @@ import { withRouter } from 'react-router';
 import moment from 'moment';
 import Datetime from 'react-datetime';
 import CalendarBox from '../../util/calendar_box';
-import Map from '../map/map';
+import MapContainer from '../map/map';
+import AttendanceIndex from './attendance_index';
 
 class EventShow extends React.Component {
   constructor(props) {
@@ -40,6 +41,53 @@ class EventShow extends React.Component {
     }
   }
 
+  eventShowShort() {
+    const {
+      name,
+      description,
+      picture_url,
+      date,
+      attendance_count,
+      lat,
+      lng,
+      event_location,
+      host,
+    } = this.props.event;
+
+    return (
+      <div className="row event-info">
+        <div className="col-sm-8" id="event-info-left">
+          <img className="img-thumbnail" src={picture_url}/>
+        </div>
+        <div className="col-sm-4" id="event-info-right">
+          <span className="event-show-name">
+            { name }
+          </span>
+          <br />
+          <span className="event-show-host">
+            Hosted by { host }
+          </span>
+          <br />
+          <span className="event-show-time">
+            { moment(date).format("HH:mm") }
+          </span>
+          <br />
+          <span className="event-calendar-container">
+            <CalendarBox
+              date={ date }
+            />
+          </span>
+          <br />
+          <span className="event-show-people">
+            { attendance_count } people going
+          </span>
+          <br />
+          { this.renderJoinButton() }
+        </div>
+      </div>
+    )
+  }
+
   render() {
     const {
       name,
@@ -50,46 +98,45 @@ class EventShow extends React.Component {
       lat,
       lng,
       event_location,
+      host,
+      attendees,
     } = this.props.event;
 
     return (
       <div className="event-show-container">
-        <div className="event-show-info">
-          <div className="event-show-left">
-            <img src={picture_url}/>
-          </div>
-          <div className="event-show-right">
-            <span className="event-show-name">
-              { name }
-            </span>
-            <br />
-            <span className="event-show-time">
-              { moment(date).format("HH:mm:ss") }
-            </span>
-            <br />
-            <span className="event-show-date">
-              <CalendarBox
-                day={ moment(date).date() }
-                month={ moment(date).month() }
-                date={ date }
+        { this.eventShowShort() }
+        <div className="row event-details">
+          <div className="col-sm-4 event-details" id="event-details-left">
+            <div className="time event-details">
+              <span>
+                <CalendarBox
+                  date={ date }
+                />
+              </span>
+              <div className="time right event-details">
+                { moment(date).format("ddd HH:mm") }
+              </div>
+            </div>
+            <div className="map-event-details">
+              <MapContainer
+                center={event_location}
+                putMarker={true}
               />
-            </span>
-            <br />
-            <span className="event-show-people">
-              { attendance_count } people going
-            </span>
-            <br />
-            { this.renderJoinButton() }
+            </div>
+            <div className="attendee-container">
+              <AttendanceIndex
+                attendees={attendees}
+              />
+            </div>
           </div>
-        </div>
-        <div className="event-show-details">
-          <div className="event-show-description">
-            <section>Description</section>
-            <section>{ description }</section>
-          </div>
-          <div className="event-show-map">
-            <section>Description</section>
-            <section>{ description }</section>
+          <div className="col-sm-8" id="event-details-right">
+            <div>
+              <h2 className="event-show-time">
+                Description
+              </h2>
+            </div>
+            <br />
+            { description }
           </div>
         </div>
       </div>

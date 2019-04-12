@@ -18,9 +18,17 @@ html, body, .page, main {
 
 .page-content {
   overflow-y: scroll;
-  overflow-x: hidden;
   background: #f6f7f8;
   height: 100vh;
+}
+
+.page-container {
+  margin: auto;
+  max-width: 1170px;
+  border-left: 1px solid #ccc;
+  overflow-x: hidden;
+  border-right: 1px solid #ccc;
+  background: white;
 }
 
 ul {

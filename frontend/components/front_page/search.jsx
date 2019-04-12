@@ -14,7 +14,7 @@ class Search extends React.Component {
       eventSearch: true
     } // Seattle coords
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleSwitchSearch = this.handleSwitchSearch.bind(this);
+    this.updateSearch = this.updateSearch.bind(this);
   }
 
   update(property) {
@@ -23,9 +23,10 @@ class Search extends React.Component {
     });
   }
 
-  handleSwitchSearch(e) {
-    e.preventDefault();
-    this.setState({eventSearch: !this.state.eventSearch});
+  updateSearch(e) {
+    return this.setState({
+      eventSearch: !this.state.eventSearch
+    });
   }
 
   renderSelectedSearch() {
@@ -51,30 +52,32 @@ class Search extends React.Component {
 
   render() {
     return (
-      <div className="map-search-container-front-page">
-        <ul className="map-search-switch">
-          <li>
-            <button
-              className={this.state.eventSearch ? "btn btn-secondary btn-lg disabled" : "btn btn-secondary btn-lg active"}
-              onClick={this.handleSwitchSearch}
-            >Event</button>
-          </li>
-          <li>
-            <button
-              className={!this.state.eventSearch ? "btn btn-secondary btn-lg disabled" : "btn btn-secondary btn-lg active"}
-              onClick={this.handleSwitchSearch}
-            >Group</button>
-          </li>
-        </ul>
-        <div className="map-search">
-          <Map
-            center={this.props.center}
-            updateFilter={this.props.updateFilter}
-            fetchLocation={this.props.fetchLocation}
-            events={this.props.events}
-            groups={this.props.groups}
-            eventSelected={this.state.eventSearch}
-          />
+      <div className="event-search-container-front-page">
+        <form className="btn-group">
+          <label className={this.state.eventSearch ? "btn btn-primary active" : "btn btn-primary"}>
+            <input type="radio"
+              checked={this.state.eventSearch === true} 
+              onChange={this.updateSearch} />
+            Event
+          </label>
+          <label className={!this.state.eventSearch ? "btn btn-primary active" : "btn btn-primary"}>
+            <input type="radio"
+              checked={this.state.eventSearch === false} 
+              onChange={this.updateSearch} />
+            Group
+          </label>
+        </form>
+        <div className="event-search">
+          <div className="event-map-container">
+            <Map
+              center={this.props.center}
+              updateFilter={this.props.updateFilter}
+              fetchLocation={this.props.fetchLocation}
+              events={this.props.events}
+              groups={this.props.groups}
+              eventSelected={this.state.eventSearch}
+            />
+          </div>
           {this.renderSelectedSearch()}
         </div>
       </div>
