@@ -14,9 +14,9 @@ export const receiveAttendance = attendance => ({
   attendance
 });
 
-export const removeAttendance = id => ({
+export const removeAttendance = event => ({
   type: REMOVE_ATTENDANCE,
-  id
+  event
 });
 
 export const receiveEvents = events => ({
@@ -47,7 +47,7 @@ export const createAttendance = eventId => dispatch => (
 
 export const destroyAttendance = eventId => dispatch => (
   APIUtil.destroyAttendance(eventId).then(
-    event => (dispatch(receiveEvent(event)))
+    event => (dispatch(removeAttendance(event)))
   )
 );
 
