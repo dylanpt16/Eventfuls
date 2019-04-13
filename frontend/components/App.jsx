@@ -7,7 +7,6 @@ import {
 } from 'react-router-dom';
 
 import HeaderContainer from './header/header_container';
-import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session_form/session_form_container';
 import EventFormContainer from './event_form/event_form_container';
 import EventShowContainer from './event_show/event_show_container';
