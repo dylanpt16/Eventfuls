@@ -60,7 +60,7 @@ button.btn.btn-secondary.btn-lg.disabled {
 }
 
 .map-container {
-  height: 80%;
+  height: calc(100% - 64px);
 }
 
 .map-search-results {

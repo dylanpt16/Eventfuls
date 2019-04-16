@@ -83,11 +83,10 @@
 }
 
 #event-details-left {
-  height: 400px;
 }
 
 .map-event-details {
-  height: 100%;
+  height: 300px;
 }
 
 #event-info-right {
@@ -96,12 +95,21 @@
   height: 100%;
   vertical-align: middle;
   flex-direction: column;
+  border-left: 1px solid #f6f7f8;
 }
 
 #event-info-left {
   text-align: center;
+  height: 100%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .row.event-info {
   border-bottom: 1px solid #f6f7f8;
+}
+
+.attendee-container {
+  text-align: center;
 }

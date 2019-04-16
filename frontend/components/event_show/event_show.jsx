@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 
 import moment from 'moment';
+import { isEmpty } from 'lodash';
 import Datetime from 'react-datetime';
 import CalendarBox from '../../util/calendar_box';
 import MapContainer from '../map/map';
@@ -89,58 +90,63 @@ class EventShow extends React.Component {
   }
 
   render() {
-    const {
-      name,
-      description,
-      picture_url,
-      date,
-      attendance_count,
-      lat,
-      lng,
-      event_location,
-      host,
-      attendees,
-    } = this.props.event;
+    if( !isEmpty(this.props.event) ) {
+      const {
+        name,
+        description,
+        picture_url,
+        date,
+        attendance_count,
+        event_location,
+        host,
+        attendees,
+      } = this.props.event;
 
-    return (
-      <div className="event-show-container">
-        { this.eventShowShort() }
-        <div className="row event-details">
-          <div className="col-sm-4 event-details" id="event-details-left">
-            <div className="time event-details">
-              <span>
-                <CalendarBox
-                  date={ date }
+      return (
+        <div className="event-show-container">
+          { this.eventShowShort() }
+          <div className="row event-details">
+            <div className="col-sm-4 event-details" id="event-details-left">
+              <div className="time event-details">
+                <span>
+                  <CalendarBox
+                    date={ date }
+                  />
+                </span>
+                <div className="time right event-details">
+                  { moment(date).format("ddd HH:mm") }
+                </div>
+              </div>
+              <div className="map-event-details">
+                <MapContainer
+                  center={event_location}
+                  putMarker={true}
                 />
-              </span>
-              <div className="time right event-details">
-                { moment(date).format("ddd HH:mm") }
+              </div>
+              <div className="attendee-container">
+                <AttendanceIndex
+                  attendees={attendees}
+                />
               </div>
             </div>
-            <div className="map-event-details">
-              <MapContainer
-                center={event_location}
-                putMarker={true}
-              />
+            <div className="col-sm-8" id="event-details-right">
+              <div>
+                <h2 className="event-show-time">
+                  Description
+                </h2>
+              </div>
+              <br />
+              { description }
             </div>
-            <div className="attendee-container">
-              <AttendanceIndex
-                attendees={attendees}
-              />
-            </div>
-          </div>
-          <div className="col-sm-8" id="event-details-right">
-            <div>
-              <h2 className="event-show-time">
-                Description
-              </h2>
-            </div>
-            <br />
-            { description }
           </div>
         </div>
-      </div>
-    );
+      );
+    }else {
+      return (
+        <div className="event-show-container">
+        </div>
+      )
+    }
   }
 }
 

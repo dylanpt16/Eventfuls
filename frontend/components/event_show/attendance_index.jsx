@@ -2,21 +2,20 @@ import React from 'react';
 
 import AttendanceIndexItem from './attendance_index_item';
 
-class AttendanceIndex extends React.Component {
-  constructor(props){
-    super(props);
-  }
+const AttendanceIndex = ({ attendees }) => (
+  <div classname="attendance-index">
+    <div>
+      <h2>Attendees</h2>
+    </div>
+    <div>
+      { attendees.map( attendee => (
+        <AttendanceIndexItem
+          attendee={attendee}
+          key={attendee.id}
+        />
+      ))}
+    </div>
+  </div>
+)
 
-  render() {
-    return(
-      <div>
-        <div>
-          <h2>Attendees:</h2>
-        </div>
-        <div>
-        </div>
-      </div>
-    )
-  }
-}
 export default AttendanceIndex;

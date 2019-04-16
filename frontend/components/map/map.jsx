@@ -37,8 +37,6 @@ class Map extends React.Component {
   componentDidUpdate() {
     if(this.props.putMarker) {
       this.placeMarker(this.map)
-      google.maps.event.clearListeners(this.map, 'idle');
-      google.maps.event.clearListeners(this.map, 'click');
     }
     if(this.state.center !== this.props.center) {
       this.map.panTo(this.props.center)
@@ -47,6 +45,11 @@ class Map extends React.Component {
     if(this.props.updateFilter) {
       this.props.eventSelected ? this.MarkerManager.updateMarkers(this.props.events) : this.MarkerManager.updateMarkers(this.props.groups);
     }
+  }
+
+  componentWillUnmount() {
+    google.maps.event.clearListeners(this.map, 'idle');
+    google.maps.event.clearListeners(this.map, 'click');
   }
 
   placeMarker(map) {
