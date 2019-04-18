@@ -110,6 +110,13 @@
   border-bottom: 1px solid #f6f7f8;
 }
 
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .attendee-container {
   text-align: center;
 }

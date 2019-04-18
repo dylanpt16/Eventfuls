@@ -3,7 +3,7 @@ import React from 'react';
 import AttendanceIndexItem from './attendance_index_item';
 
 const AttendanceIndex = ({ attendees }) => (
-  <div classname="attendance-index">
+  <div className="attendance-index">
     <div>
       <h2>Attendees</h2>
     </div>

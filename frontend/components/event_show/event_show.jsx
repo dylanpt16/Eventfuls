@@ -105,7 +105,7 @@ class EventShow extends React.Component {
       return (
         <div className="event-show-container">
           { this.eventShowShort() }
-          <div className="row event-details">
+          <div className="row event-details row-eq-height">
             <div className="col-sm-4 event-details" id="event-details-left">
               <div className="time event-details">
                 <span>
