@@ -60,8 +60,6 @@
 }
 
 .row.event-info {
-  padding-top: 30px;
-  height: 400px;
 }
 
 .event-info .img-thumbnail {
@@ -92,18 +90,16 @@
 #event-info-right {
   text-align: center;
   display: flex;
-  height: 100%;
-  vertical-align: middle;
   flex-direction: column;
   border-left: 1px solid #f6f7f8;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #event-info-left {
   text-align: center;
-  height: 100%;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .row.event-info {

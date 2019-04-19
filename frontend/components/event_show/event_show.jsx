@@ -56,7 +56,7 @@ class EventShow extends React.Component {
     } = this.props.event;
 
     return (
-      <div className="row event-info">
+      <div className="row event-info row-eq-height">
         <div className="col-sm-8" id="event-info-left">
           <img className="img-thumbnail" src={picture_url}/>
         </div>
@@ -105,7 +105,7 @@ class EventShow extends React.Component {
       return (
         <div className="event-show-container">
           { this.eventShowShort() }
-          <div className="row event-details row-eq-height">
+          <div className="row event-details">
             <div className="col-sm-4 event-details" id="event-details-left">
               <div className="time event-details">
                 <span>
