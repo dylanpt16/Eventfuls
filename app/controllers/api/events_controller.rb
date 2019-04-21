@@ -12,6 +12,7 @@ class Api::EventsController < ApplicationController
         @event.errors.messages[:location] = ["can't be blank"]
       end
       @event.errors.messages.delete :picture_url if @event.errors.messages[:picture]
+        @event.errors.messages[:picture] = ["can't be blank"]
       render json: @event.errors.full_messages, status: 422
     end
   end

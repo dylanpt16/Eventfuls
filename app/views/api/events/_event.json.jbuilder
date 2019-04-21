@@ -17,4 +17,4 @@ end
 
 json.attendance_count event.attendees.length
 
-json.host event.host.username
+json.host event.host.name

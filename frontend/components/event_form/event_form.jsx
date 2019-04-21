@@ -13,7 +13,7 @@ class EventForm extends React.Component {
     this.state = {
       name: '',
       description: '',
-      date: new Date(),
+      date: '',
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.eventAddress = this.eventAddress.bind(this);
@@ -22,6 +22,9 @@ class EventForm extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    if (this.props.formType !== nextProps.formType) {
+      return null;
+    }
     if (!nextProps.errors.length) {
       this.props.history.push(`/`);
     }

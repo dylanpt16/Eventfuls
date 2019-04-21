@@ -73,6 +73,10 @@
   padding: 10px;
 }
 
+.event-details-container {
+  margin-bottom: 30px;
+}
+
 .time.right.event-details {
   font-size: 30px;
   font-weight: bold;
@@ -115,4 +119,10 @@
 
 .attendee-container {
   text-align: center;
+}
+
+img.user-img {
+  height: 50px;
+  width: 50px;
+  margin: auto;
 }

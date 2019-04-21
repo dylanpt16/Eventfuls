@@ -19,19 +19,37 @@ html, body, .page, main {
 .page-content {
   overflow-y: scroll;
   background: #f6f7f8;
-  height: 100vh;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .page-container {
   margin: auto;
   max-width: 1170px;
+  width: 100vw;
   border-left: 1px solid #ccc;
   overflow-x: hidden;
   border-right: 1px solid #ccc;
   background: white;
-  height: 100%;
+  flex-grow: 1;
 }
 
 ul {
   list-style: none;
+}
+
+.footer {
+  background: black;
+  height: 50px;
+  color: white;
+  font-size: 20px;
+}
+
+.footer .col-lg-12 .col-md-8 a {
+  color: white;
+}
+
+.page-container > *:first-child {
+  min-height: calc(100vh - 100px);
 }

@@ -12,6 +12,7 @@ class Api::GroupsController < ApplicationController
         @group.errors.messages[:location] = ["can't be blank"]
       end
       @group.errors.messages.delete :picture_url if @group.errors.messages[:picture]
+      @group.errors.messages[:picture] = ["can't be blank"]
       render json: @group.errors.full_messages, status: 422
     end
   end

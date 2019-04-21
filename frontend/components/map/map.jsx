@@ -29,6 +29,9 @@ class Map extends React.Component {
     this.map = new google.maps.Map(map, this.state);
     this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this))
     this.registerListeners();
+    if(this.props.putMarker) {
+      this.placeMarker(this.map)
+    }
     if(!!this.props.updateFilter) {
       this.props.eventSelected ? this.MarkerManager.updateMarkers(this.props.events) : this.MarkerManager.updateMarkers(this.props.groups);
     }

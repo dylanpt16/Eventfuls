@@ -52,37 +52,39 @@ class SessionForm extends React.Component {
   render() {
     return(
       <div className="session-form-container">
-        <form onSubmit={this.handleSubmit} className="session-form-box">
-          <h2 className="session-form-welcome">Welcome to Eventfuls!</h2>
-          { this.renderErrors() }
-          <h2 className="session-form-directions">Enter Your Username and Password</h2>
-          <div className="session-form">
-            <input type="text"
-              value={this.state.username}
-              onChange={this.update('username')}
-              placeholder="Username"
-              className="session-input"
-            />
-            <br/>
-            <input type="password"
-              value={this.state.password}
-              onChange={this.update('password')}
-              placeholder="Password"
-              className="session-input"
-            />
-            <br/>
+        <div className="session-form">
+          <form onSubmit={this.handleSubmit} className="session-form-box">
+            <h2 className="session-form-welcome">Welcome to Eventfuls!</h2>
+            { this.renderErrors() }
+            <h2 className="session-form-directions">Enter Your Username and Password</h2>
+            <div>
+              <input type="text"
+                value={this.state.username}
+                onChange={this.update('username')}
+                placeholder="Username"
+                className="session-input"
+              />
+              <br/>
+              <input type="password"
+                value={this.state.password}
+                onChange={this.update('password')}
+                placeholder="Password"
+                className="session-input"
+              />
+              <br/>
+              <button
+                onClick={this.handleSubmit}
+                id="login-btn"
+                className="btn btn-primary btn-lg">{this.props.formType}</button>
+            </div>
+          </form>
+          <div className="guest-login">
+            <h3>or</h3>
             <button
-              onClick={this.handleSubmit}
-              id="login-btn"
-              className="btn btn-primary btn-lg">{this.props.formType}</button>
+              onClick={this.guestLogin}
+              id="guest-btn"
+              className="btn btn-primary btn-lg">Login As Guest</button>
           </div>
-        </form>
-        <div className="guest-login">
-          <h3>or</h3>
-          <button
-            onClick={this.guestLogin}
-            id="guest-btn"
-            className="btn btn-primary btn-lg">Login As Guest</button>
         </div>
       </div>
     );
