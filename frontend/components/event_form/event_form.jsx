@@ -92,7 +92,6 @@ class EventForm extends React.Component {
 
     return (
       <div className="new-event-container">
-        <Video />
 
         <div className="new-event-form">
           <h3 className="new-event-title">Create A {formType}!</h3>
@@ -145,6 +144,7 @@ class EventForm extends React.Component {
             </div>
           </div>
         </div>
+        <Video />
       </div>
     );
   }
