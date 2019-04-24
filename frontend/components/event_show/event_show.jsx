@@ -136,7 +136,9 @@ class EventShow extends React.Component {
                 </h2>
               </div>
               <br />
-              { description }
+              <p>
+                { description }
+              </p>
             </div>
           </div>
         </div>
