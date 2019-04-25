@@ -2,10 +2,12 @@ class Group < ApplicationRecord
   validates :name, :description, :owner_id, :picture_url, :lat, :lng, presence: true
 
   validates :name, uniqueness: true
+
   has_many :memberships
 
-  has_many :users,
-    through: :memberships
+  has_many :members,
+    through: :memberships,
+    source: :user
 
   belongs_to :owner,
     class_name: 'User',

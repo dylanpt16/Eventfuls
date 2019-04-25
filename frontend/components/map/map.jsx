@@ -83,8 +83,8 @@ class Map extends React.Component {
     }
   }
 
-  handleMarkerClick(event) {
-    this.props.eventSelected ? this.props.history.push(`events/${event.id}`) : this.props.history.push(`groups/${group.id}`);
+  handleMarkerClick(Obj) {
+    this.props.eventSelected ? this.props.history.push(`events/${Obj.id}`) : this.props.history.push(`groups/${Obj.id}`);
   }
 
   handleClick(coords) {

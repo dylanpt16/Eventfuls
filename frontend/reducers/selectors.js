@@ -10,3 +10,8 @@ export const selectEvent = ({ events}, id) => {
    const event = events[id] || {};
    return event
 };
+
+export const selectGroup = ({ groups }, id) => {
+   const group = groups[id] || {};
+   return group;
+};

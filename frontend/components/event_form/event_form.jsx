@@ -54,6 +54,7 @@ class EventForm extends React.Component {
     e.preventDefault();
     if (this.props.formType === 'group') {
       const group = Object.assign({}, this.state, this.coords);
+      delete group.date;
       this.props.processForm({group});
     }else {
       const event = Object.assign({}, this.state, this.coords);

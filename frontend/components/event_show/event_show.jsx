@@ -16,7 +16,9 @@ class EventShow extends React.Component {
   }
 
   componentWillMount() {
-    this.props.fetchEvent(this.props.eventId);
+    if( isEmpty(this.props.event) ) {
+      this.props.fetchEvent(this.props.eventId);
+    }
   }
 
   handleAttendButton(e) {
