@@ -8,7 +8,7 @@ const MemberIndex = ({ members }) => (
       <h2>Members</h2>
     </div>
     <div>
-      { members.map( member => (
+      { members.slice().reverse().map( member => (
         <MemberIndexItem
           member={member}
           key={member.id}

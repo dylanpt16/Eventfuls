@@ -19,7 +19,8 @@ const eventsReducer = (state = {}, action) => {
       return merge({}, state, newEvent);
     case REMOVE_ATTENDANCE:
       newEvent = {[action.event.id]: action.event};
-      return newEvent;
+      delete newState[action.event.id].attendees;
+      return merge({}, newState, newEvent);
     default:
       return state;
   }

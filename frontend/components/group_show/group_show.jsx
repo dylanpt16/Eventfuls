@@ -3,15 +3,27 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import { isEmpty } from 'lodash';
 import MemberIndex from './member_index';
+import Announcement from './announcement';
 
 class GroupShow extends React.Component {
   constructor(props) {
     super(props);
+    this.handleJoin = this.handleJoin.bind(this);
   }
 
   componentWillMount() {
     if( isEmpty(this.props.group) ) {
       this.props.fetchGroup(this.props.groupId);
+    }
+  }
+
+  handleJoin(e) {
+    e.preventDefault();
+    const membership = { group_id: this.props.groupId };
+    if (!this.props.group.joined_by_current_user) {
+      this.props.createMembership({membership});
+    }else {
+      this.props.destroyMembership({membership});
     }
   }
 
@@ -36,6 +48,9 @@ class GroupShow extends React.Component {
             Organizer: { owner }
           </span>
           <br />
+          <button
+            onClick={this.handleJoin}
+          >Member</button>
         </div>
       </div>
     );
@@ -44,11 +59,16 @@ class GroupShow extends React.Component {
   renderGroupDetails() {
     const {
       members,
+      announcements
     } = this.props.group;
 
     return(
       <div className="row event-details-container">
         <div className="col-sm-4 event-details" id="event-details-left">
+          <Announcement
+            announcements={announcements}
+            group={this.props.group}
+          />
           <MemberIndex
             members={members}
           />

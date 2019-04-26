@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180216042907) do
+ActiveRecord::Schema.define(version: 20180223011519) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "announcements", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "group_id", null: false
+    t.string "content", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["group_id"], name: "index_announcements_on_group_id"
+    t.index ["user_id"], name: "index_announcements_on_user_id"
+  end
 
   create_table "attendances", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -55,6 +65,16 @@ ActiveRecord::Schema.define(version: 20180216042907) do
     t.index ["group_id"], name: "index_memberships_on_group_id"
     t.index ["user_id", "group_id"], name: "index_memberships_on_user_id_and_group_id", unique: true
     t.index ["user_id"], name: "index_memberships_on_user_id"
+  end
+
+  create_table "replies", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "announcement_id", null: false
+    t.string "content", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["announcement_id"], name: "index_replies_on_announcement_id"
+    t.index ["user_id"], name: "index_replies_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

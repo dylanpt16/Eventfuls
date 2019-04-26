@@ -13,6 +13,8 @@ class Group < ApplicationRecord
     class_name: 'User',
     foreign_key: :owner_id
 
+  has_many :announcements
+
   def self.in_bounds(bounds)
     self.where("lat < ?", bounds[:northEast][:lat])
       .where("lat > ?", bounds[:southWest][:lat])

@@ -12,3 +12,7 @@ end
 json.member_count group.members.length
 
 json.owner group.owner.name
+
+json.announcements do
+  json.partial! 'api/announcements/announcement', collection: group.announcements, as: :announcement
+end

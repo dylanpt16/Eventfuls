@@ -3,6 +3,8 @@ import * as APIUtil from '../util/group_api_util';
 export const RECEIVE_GROUPS = 'RECEIVE_GROUPS';
 export const RECEIVE_GROUP = 'RECEIVE_GROUP';
 export const RECEIVE_GROUP_ERRORS = 'RECEIVE_GROUP_ERRORS';
+export const RECEIVE_ANNOUNCEMENT = "RECEIVE_ANNOUNCEMENT";
+export const RECEIVE_MEMBERSHIP = 'RECEIVE_MEMBERSHIP';
 
 export const receiveGroups = groups => ({
   type: RECEIVE_GROUPS,
@@ -18,6 +20,40 @@ export const receiveErrors = errors => ({
   type: RECEIVE_GROUP_ERRORS,
   errors
 });
+
+export const receiveAnnouncement = announcement => ({
+  type: RECEIVE_ANNOUNCEMENT,
+  announcement
+});
+
+export const receiveMembership = group => ({
+  type: RECEIVE_MEMBERSHIP,
+  group
+});
+
+export const destroyMembership = groupId => dispatch => (
+  APIUtil.destroyMembership(groupId).then(
+    group => (dispatch(receiveMembership(group)))
+  )
+);
+
+export const createMembership = membership => dispatch => (
+  APIUtil.createMembership(membership).then(
+    group => (dispatch(receiveMembership(group)))
+  )
+);
+
+export const createReply = reply => dispatch => (
+  APIUtil.createReply(reply).then(
+    membership => (dispatch(receiveMembership(group)))
+  )
+);
+
+export const createAnnouncement = announcement => dispatch => (
+  APIUtil.createAnnouncement(announcement).then(
+    announcement => (dispatch(receiveAnnouncement(announcement))
+    ))
+);
 
 export const fetchGroups = (filters) => dispatch => (
   APIUtil.fetchGroups(filters).then(
