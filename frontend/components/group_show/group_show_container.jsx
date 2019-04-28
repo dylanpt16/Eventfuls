@@ -6,6 +6,10 @@ import {
   createMembership,
   destroyMembership
 } from '../../actions/group_actions';
+import {
+  fetchAnnouncements,
+} from '../../actions/announcement_actions';
+import { asPostArray } from '../../reducers/selectors';
 import GroupShow from './group_show';
 
 const mapStateToProps = (state, { match }) => {
@@ -14,11 +18,15 @@ const mapStateToProps = (state, { match }) => {
   return {
     groupId,
     group,
+    announcements: asPostArray(state.entities)
   };
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchGroup: (id) => dispatch(fetchGroup(id)),
+  fetchGroup: (id) => {
+    dispatch(fetchGroup(id))
+    dispatch(fetchAnnouncements({group_id: id}))
+  },
   createMembership: membership => dispatch(createMembership(membership)),
   destroyMembership: membership => dispatch(destroyMembership(membership))
 });

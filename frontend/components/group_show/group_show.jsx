@@ -12,9 +12,7 @@ class GroupShow extends React.Component {
   }
 
   componentWillMount() {
-    if( isEmpty(this.props.group) ) {
-      this.props.fetchGroup(this.props.groupId);
-    }
+    this.props.fetchGroup(this.props.groupId);
   }
 
   handleJoin(e) {
@@ -59,8 +57,8 @@ class GroupShow extends React.Component {
   renderGroupDetails() {
     const {
       members,
-      announcements
     } = this.props.group;
+    const announcements = this.props.announcements;
 
     return(
       <div className="row event-details-container">

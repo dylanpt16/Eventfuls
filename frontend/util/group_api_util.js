@@ -21,14 +21,6 @@ export const createGroup = group => (
   })
 );
 
-export const createAnnouncement = announcement => (
-  $.ajax({
-    method: 'POST',
-    url: '/api/announcements',
-    data: announcement
-  })
-);
-
 export const createMembership = membership => (
   $.ajax({
     method: 'POST',

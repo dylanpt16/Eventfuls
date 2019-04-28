@@ -3,8 +3,8 @@ import * as APIUtil from '../util/group_api_util';
 export const RECEIVE_GROUPS = 'RECEIVE_GROUPS';
 export const RECEIVE_GROUP = 'RECEIVE_GROUP';
 export const RECEIVE_GROUP_ERRORS = 'RECEIVE_GROUP_ERRORS';
-export const RECEIVE_ANNOUNCEMENT = "RECEIVE_ANNOUNCEMENT";
 export const RECEIVE_MEMBERSHIP = 'RECEIVE_MEMBERSHIP';
+export const RECEIVE_REPLY = 'RECEIVE_REPLY';
 
 export const receiveGroups = groups => ({
   type: RECEIVE_GROUPS,
@@ -21,14 +21,14 @@ export const receiveErrors = errors => ({
   errors
 });
 
-export const receiveAnnouncement = announcement => ({
-  type: RECEIVE_ANNOUNCEMENT,
-  announcement
-});
-
 export const receiveMembership = group => ({
   type: RECEIVE_MEMBERSHIP,
   group
+});
+
+export const receiveReply = reply => ({
+  type: RECEIVE_REPLY,
+  reply
 });
 
 export const destroyMembership = groupId => dispatch => (
@@ -45,14 +45,8 @@ export const createMembership = membership => dispatch => (
 
 export const createReply = reply => dispatch => (
   APIUtil.createReply(reply).then(
-    membership => (dispatch(receiveMembership(group)))
+    announcement => (dispatch(receiveReply(announcement)))
   )
-);
-
-export const createAnnouncement = announcement => dispatch => (
-  APIUtil.createAnnouncement(announcement).then(
-    announcement => (dispatch(receiveAnnouncement(announcement))
-    ))
 );
 
 export const fetchGroups = (filters) => dispatch => (

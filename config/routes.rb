@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     delete '/attendances', to: 'attendances#destroy'
     resources :memberships, only: [:create]
     delete '/memberships', to: 'memberships#destroy'
-    resources :announcements, only: [:create]
+    resources :announcements, only: [:index, :create]
     resources :replies, only: [:create]
   end
 

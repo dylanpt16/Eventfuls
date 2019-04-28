@@ -1,10 +1,12 @@
 import merge from 'lodash/merge';
+import extend from 'lodash/extend';
 
 import {
   RECEIVE_GROUPS,
   RECEIVE_GROUP,
   RECEIVE_ANNOUNCEMENT,
   RECEIVE_MEMBERSHIP,
+  RECEIVE_REPLY,
 } from '../actions/group_actions';
 
 const groupsReducer = (state = {}, action) => {
@@ -24,7 +26,8 @@ const groupsReducer = (state = {}, action) => {
       return newState;
     case RECEIVE_MEMBERSHIP:
       newGroup = {[action.group.id]: action.group};
-      delete newState[action.group.id].members;
+      return extend({}, newState, newGroup);
+    case RECEIVE_REPLY:
       return merge({}, newState, newGroup);
     default:
       return state;

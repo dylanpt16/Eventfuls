@@ -2,7 +2,7 @@ class Api::RepliesController < ApplicationController
   def create
     @reply = Reply.new(reply_params)
     @reply.user_id = current_user.id
-    debugger
+
     if @reply.save
       @announcement = @reply.announcement
       render 'api/announcements/show'
@@ -15,7 +15,8 @@ class Api::RepliesController < ApplicationController
 
   def reply_params
     params.require(:reply).permit(
-      :announcement_id
+      :announcement_id,
+      :content
     )
   end
 end

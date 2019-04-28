@@ -6,6 +6,10 @@ export const asGroupArray = ({ groups }) => (
   Object.keys(groups).map(key => groups[key])
 );
 
+export const asPostArray = ({ announcements }) => (
+  Object.keys(announcements).map(key => announcements[key])
+);
+
 export const selectEvent = ({ events}, id) => {
    const event = events[id] || {};
    return event

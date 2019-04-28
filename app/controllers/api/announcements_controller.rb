@@ -9,9 +9,17 @@ class Api::AnnouncementsController < ApplicationController
     end
   end
 
+  def index
+    @announcements = Announcement.where(group_id: groupId)
+  end
+
   private
 
   def announcement_params
     params.require(:announcement).permit(:content, :group_id, :user_id)
+  end
+
+  def groupId
+    params[:group_id]
   end
 end
