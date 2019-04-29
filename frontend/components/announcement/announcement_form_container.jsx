@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { createAnnouncement } from '../../actions/group_actions';
+import { createAnnouncement } from '../../actions/announcement_actions';
 import AnnouncementForm from './announcement_form';
 
 const mapStateToProps = (state) => ({

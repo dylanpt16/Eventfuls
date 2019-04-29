@@ -25,7 +25,6 @@ const mapStateToProps = (state, { match }) => {
 const mapDispatchToProps = dispatch => ({
   fetchGroup: (id) => {
     dispatch(fetchGroup(id))
-    dispatch(fetchAnnouncements({group_id: id}))
   },
   createMembership: membership => dispatch(createMembership(membership)),
   destroyMembership: membership => dispatch(destroyMembership(membership))

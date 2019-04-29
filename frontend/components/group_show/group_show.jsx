@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import { isEmpty } from 'lodash';
 import MemberIndex from './member_index';
-import Announcement from './announcement';
+import AnnouncementContainer from '../announcement/announcement_container';
 
 class GroupShow extends React.Component {
   constructor(props) {
@@ -58,14 +58,13 @@ class GroupShow extends React.Component {
     const {
       members,
     } = this.props.group;
-    const announcements = this.props.announcements;
 
     return(
       <div className="row event-details-container">
         <div className="col-sm-4 event-details" id="event-details-left">
-          <Announcement
-            announcements={announcements}
+          <AnnouncementContainer
             group={this.props.group}
+            groupId={this.props.groupId}
           />
           <MemberIndex
             members={members}
