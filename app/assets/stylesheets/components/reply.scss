@@ -1,0 +1,27 @@
+.reply-container {
+  padding-left: 20px;
+}
+
+.reply-index-item div:first-child {
+  font-weight: bold;
+}
+
+button.btn.btn-outline-danger {
+  margin: 0 5px;
+}
+
+.reply-form-container input {
+  width: 80%;
+}
+
+.button-container, .reply-form-container {
+  padding: 5px 0;
+}
+
+.reply-index-item {
+  margin: 10px 0;
+}
+
+.reply-index div:last-child {
+  border: none;
+}

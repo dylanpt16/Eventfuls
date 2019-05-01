@@ -4,14 +4,16 @@ import AnnouncementIndexItem from './announcement_index_item';
 import ReplyContainer from '../reply/reply_container';
 
 const AnnouncementIndex = ({ announcements }) => (
-  <div>
-    { announcements.map( announcement => (
-      <div key={announcement.id}>
+  <div className="announcement-index">
+    { announcements.slice().reverse().map( announcement => (
+      <div
+        key={announcement.id}
+        className="announcement-index-item"
+      >
         <AnnouncementIndexItem
           announcement={announcement}
         />
         <ReplyContainer
-          replies={announcement.replies}
           announcementId={announcement.id}
         />
       </div>

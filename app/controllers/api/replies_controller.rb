@@ -4,11 +4,14 @@ class Api::RepliesController < ApplicationController
     @reply.user_id = current_user.id
 
     if @reply.save
-      @announcement = @reply.announcement
-      render 'api/announcements/show'
+      render :show
     else
       render json: @reply, status: :unprocessable_entity
     end
+  end
+
+  def index
+    @replies = Reply.where(announcement_id: postId)
   end
 
   private
@@ -18,5 +21,9 @@ class Api::RepliesController < ApplicationController
       :announcement_id,
       :content
     )
+  end
+
+  def postId
+    params[:announcement_id]
   end
 end

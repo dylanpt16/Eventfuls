@@ -4,7 +4,6 @@ export const RECEIVE_GROUPS = 'RECEIVE_GROUPS';
 export const RECEIVE_GROUP = 'RECEIVE_GROUP';
 export const RECEIVE_GROUP_ERRORS = 'RECEIVE_GROUP_ERRORS';
 export const RECEIVE_MEMBERSHIP = 'RECEIVE_MEMBERSHIP';
-export const RECEIVE_REPLY = 'RECEIVE_REPLY';
 
 export const receiveGroups = groups => ({
   type: RECEIVE_GROUPS,
@@ -26,11 +25,6 @@ export const receiveMembership = group => ({
   group
 });
 
-export const receiveReply = reply => ({
-  type: RECEIVE_REPLY,
-  reply
-});
-
 export const destroyMembership = groupId => dispatch => (
   APIUtil.destroyMembership(groupId).then(
     group => (dispatch(receiveMembership(group)))
@@ -40,12 +34,6 @@ export const destroyMembership = groupId => dispatch => (
 export const createMembership = membership => dispatch => (
   APIUtil.createMembership(membership).then(
     group => (dispatch(receiveMembership(group)))
-  )
-);
-
-export const createReply = reply => dispatch => (
-  APIUtil.createReply(reply).then(
-    announcement => (dispatch(receiveReply(announcement)))
   )
 );
 

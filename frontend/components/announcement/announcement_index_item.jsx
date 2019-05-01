@@ -1,12 +1,12 @@
 import React from 'react';
 
 const AnnouncementIndexItem = ({ announcement }) => (
-  <div>
-    <div>
-      {announcement.content}
+  <div className="announcement-index-item-details">
+    <div className="announcement-index-item-name">
+      {announcement.user.name}
     </div>
     <div>
-      {announcement.user.name}
+      {announcement.content}
     </div>
   </div>
 )

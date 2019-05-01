@@ -36,11 +36,3 @@ export const destroyMembership = membership => (
     data: membership
   })
 );
-
-export const createReply = reply => (
-  $.ajax({
-    method: 'POST',
-    url: '/api/replies',
-    data: reply
-  })
-)

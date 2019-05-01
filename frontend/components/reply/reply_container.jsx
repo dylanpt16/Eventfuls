@@ -1,36 +1,24 @@
-import React from 'react';
+import { connect } from 'react-redux';
 
-import ReplyFormContainer from './reply_form_container';
+import {
+  fetchReplies,
+  createReply
+} from '../../actions/reply_actions';
+import {
+  asReplyArray,
+} from '../../reducers/selectors';
+import Reply from './reply';
 
-class ReplyContainer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      form: false
-    }
-    this.renderForm = this.renderForm.bind(this);
-  }
+const mapStateToProps = ({entities}, {announcementId}) => ({
+  replies: asReplyArray(entities.replies[announcementId])
+});
 
-  renderForm() {
-    this.setState(prevState => ({
-      form: !prevState.form
-    }));
-  }
+const mapDispatchToProps = dispatch => ({
+  fetchReplies: announcement_id => dispatch(fetchReplies({announcement_id})),
+  createReply: reply => dispatch(createReply(reply))
+});
 
-  render() {
-    return(
-      <div>
-        <div>
-          <button
-            onClick={this.renderForm}
-          >toggle</button>
-          { this.state.form ? (<ReplyFormContainer announcementId={this.props.announcementId}/>) : (<div></div>)}
-        </div>
-        <div>
-        </div>
-      </div>
-    );
-  }
-}
-
-export default ReplyContainer;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Reply);

@@ -10,12 +10,18 @@ export const asPostArray = ({ announcements }) => (
   Object.keys(announcements).map(key => announcements[key])
 );
 
+export const asReplyArray = (replies) => {
+  if(replies) {
+    return Object.keys(replies).map(key => replies[key])
+  }
+};
+
 export const selectEvent = ({ events}, id) => {
-   const event = events[id] || {};
-   return event
+  const event = events[id] || {};
+  return event
 };
 
 export const selectGroup = ({ groups }, id) => {
-   const group = groups[id] || {};
-   return group;
+  const group = groups[id] || {};
+  return group;
 };

@@ -16,7 +16,7 @@ class Announcement extends React.Component {
     const { announcements, group }  = this.props
 
     return(
-      <div>
+      <div className="announcement-container">
         <h2>Announcements</h2>
         <AnnouncementIndex
           announcements={announcements}

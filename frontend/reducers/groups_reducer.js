@@ -23,8 +23,6 @@ const groupsReducer = (state = {}, action) => {
     case RECEIVE_MEMBERSHIP:
       newGroup = {[action.group.id]: action.group};
       return extend({}, newState, newGroup);
-    case RECEIVE_REPLY:
-      return merge({}, newState, newGroup);
     default:
       return state;
   }
