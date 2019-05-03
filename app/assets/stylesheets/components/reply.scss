@@ -2,12 +2,19 @@
   padding-left: 20px;
 }
 
-.reply-index-item div:first-child {
+.reply-index-item-title {
   font-weight: bold;
+  display: flex;
+}
+
+.reply-index-item-title div:last-child {
+  font-weight: normal;
+  padding: 0 5px;
+  color: #A9A9A9;
 }
 
 button.btn.btn-outline-danger {
-  margin: 0 5px;
+  margin: 5px 5px;
 }
 
 .reply-form-container input {

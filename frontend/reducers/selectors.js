@@ -6,6 +6,10 @@ export const asGroupArray = ({ groups }) => (
   Object.keys(groups).map(key => groups[key])
 );
 
+export const asMemberArray = ({ memberships }) => (
+  Object.keys(memberships).map(key =>memberships[key])
+);
+
 export const asPostArray = ({ announcements }) => (
   Object.keys(announcements).map(key => announcements[key])
 );

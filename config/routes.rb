@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :events, only: [:index, :show, :create]
     resources :attendances, only: [:create]
     delete '/attendances', to: 'attendances#destroy'
-    resources :memberships, only: [:create]
+    resources :memberships, only: [:create, :index]
     delete '/memberships', to: 'memberships#destroy'
     resources :announcements, only: [:index, :create]
     resources :replies, only: [:create, :index]

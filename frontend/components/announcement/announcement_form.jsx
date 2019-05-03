@@ -28,22 +28,19 @@ class AnnouncementForm extends React.Component {
   render() {
     if (this.props.group.owned_by_current_user) {
       return(
-        <div>
-          <div>
-            <input
-              type="text"
-              value={this.state.content}
-              onChange={this.update('content')}
-              placeholder="announcement"
-            />
-          </div>
-          <div>
-            <button
-              onClick={this.handleSubmit}
-            >
-              Submit
-            </button>
-          </div>
+        <div className="announcement-form-container">
+          <input
+            type="text"
+            value={this.state.content}
+            onChange={this.update('content')}
+            placeholder="announcement"
+          />
+          <button
+            onClick={this.handleSubmit}
+            className="btn btn-outline-danger"
+          >
+            Submit
+          </button>
         </div>
       );
     }

@@ -20,23 +20,6 @@ export const receiveErrors = errors => ({
   errors
 });
 
-export const receiveMembership = group => ({
-  type: RECEIVE_MEMBERSHIP,
-  group
-});
-
-export const destroyMembership = groupId => dispatch => (
-  APIUtil.destroyMembership(groupId).then(
-    group => (dispatch(receiveMembership(group)))
-  )
-);
-
-export const createMembership = membership => dispatch => (
-  APIUtil.createMembership(membership).then(
-    group => (dispatch(receiveMembership(group)))
-  )
-);
-
 export const fetchGroups = (filters) => dispatch => (
   APIUtil.fetchGroups(filters).then(
     groups => (dispatch(receiveGroups(groups)))

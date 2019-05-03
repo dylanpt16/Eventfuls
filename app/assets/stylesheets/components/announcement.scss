@@ -1,9 +1,17 @@
 .announcement-index {
   padding: 0 5px;
+  overflow: scroll;
 }
 
 .announcement-index-item {
   border-bottom: 1px solid red;
+}
+
+.announcement-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  overflow: hidden;
 }
 
 .announcement-container h2 {
@@ -12,4 +20,24 @@
 
 .announcement-index-item-name {
   font-weight: bold;
+  display: flex;
+}
+
+.announcement-index-item-name div {
+}
+
+.announcement-index-item-name div:last-child {
+  font-weight: normal;
+  padding: 0 5px;
+  color: #A9A9A9;
+}
+
+.announcement-form-container {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.announcement-form-container input {
+  width: 80%;
+  height: 50px;
 }

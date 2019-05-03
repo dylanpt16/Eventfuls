@@ -17,6 +17,17 @@
   border-color: #dc3545;
 }
 
+.member-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  overflow: hidden;
+}
+
 .member-index {
+  overflow: scroll;
+}
+
+.member-container, .member-index {
   text-align: center;
 }

@@ -12,13 +12,13 @@ class GroupShow extends React.Component {
   }
 
   componentWillMount() {
-    this.props.fetchGroup(this.props.groupId);
+    this.props.fetchGroupDetails(this.props.groupId);
   }
 
   handleJoin(e) {
     e.preventDefault();
     const membership = { group_id: this.props.groupId };
-    if (!this.props.group.joined_by_current_user) {
+    if (!this.props.joined_by_current_user) {
       this.props.createMembership({membership});
     }else {
       this.props.destroyMembership({membership});
@@ -31,6 +31,8 @@ class GroupShow extends React.Component {
       picture_url,
       owner,
     } = this.props.group;
+
+    const hasJoined = this.props.joined_by_current_user;
 
     return(
       <div className="row event-info row-eq-height">
@@ -46,18 +48,20 @@ class GroupShow extends React.Component {
             Organizer: { owner }
           </span>
           <br />
-          <button
-            onClick={this.handleJoin}
-          >Member</button>
+          <div className="attend-button">
+            <button
+              className={ hasJoined ? "attended" : "unattended"}
+              onClick={this.handleJoin}
+            >{ !hasJoined ? "Subscribe!" : "Unsubscribe"}
+            </button>
+          </div>
         </div>
       </div>
     );
   }
 
   renderGroupDetails() {
-    const {
-      members,
-    } = this.props.group;
+    const { members } = this.props;
 
     return(
       <div className="row event-details-container">

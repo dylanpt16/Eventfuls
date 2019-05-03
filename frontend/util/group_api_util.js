@@ -20,19 +20,3 @@ export const createGroup = group => (
     data: group
   })
 );
-
-export const createMembership = membership => (
-  $.ajax({
-    method: 'POST',
-    url: '/api/memberships',
-    data: membership
-  })
-);
-
-export const destroyMembership = membership => (
-  $.ajax({
-    method: 'DELETE',
-    url: '/api/memberships',
-    data: membership
-  })
-);

@@ -1,14 +1,13 @@
 class Api::MembershipsController < ApplicationController
   def index
-    @memberships = Membership.all
+    @memberships = Membership.where(group_id: params[:group_id])
   end
 
   def create
     @membership = Membership.new(membership_params)
     @membership.user_id = current_user.id
     if @membership.save
-      @group = @membership.group
-      render 'api/groups/show'
+      render :show
     else
       render json: @membership, status: :unprocessable_entity
     end
@@ -20,8 +19,8 @@ class Api::MembershipsController < ApplicationController
       group_id: params[:membership][:group_id]
     )
     @membership.destroy
-    @group = Group.find(params[:membership][:group_id])
-    render 'api/groups/show'
+    @memberships = Membership.where(group_id: params[:membership][:group_id])
+    render :index
   end
 
   private

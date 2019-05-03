@@ -3,28 +3,32 @@ import { connect } from 'react-redux';
 import { selectGroup } from '../../reducers/selectors';
 import {
   fetchGroup,
-  createMembership,
-  destroyMembership
 } from '../../actions/group_actions';
 import {
-  fetchAnnouncements,
-} from '../../actions/announcement_actions';
-import { asPostArray } from '../../reducers/selectors';
+  fetchMemberships,
+  createMembership,
+  destroyMembership
+} from '../../actions/membership_actions';
+import { asPostArray, asMemberArray } from '../../reducers/selectors';
 import GroupShow from './group_show';
 
 const mapStateToProps = (state, { match }) => {
   const groupId = parseInt(match.params.groupId);
   const group = selectGroup(state.entities, match.params.groupId);
+  const currentUserId = state.session.currentUser.id;
+  const members = asMemberArray(state.entities);
   return {
     groupId,
     group,
-    announcements: asPostArray(state.entities)
+    members,
+    joined_by_current_user: Boolean(state.entities.memberships[currentUserId]),
   };
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchGroup: (id) => {
+  fetchGroupDetails: (id) => {
     dispatch(fetchGroup(id))
+    dispatch(fetchMemberships({group_id: id}))
   },
   createMembership: membership => dispatch(createMembership(membership)),
   destroyMembership: membership => dispatch(destroyMembership(membership))

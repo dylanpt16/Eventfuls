@@ -37,7 +37,7 @@ class EventShow extends React.Component {
           <button
             className={ hasJoined ? "attended" : "unattended"}
             onClick={this.handleAttendButton}
-          >{ !hasJoined ? "Attend!" : "Unattend!"}
+          >{ !hasJoined ? "Attend!" : "Unattend"}
           </button>
         </div>
       );
