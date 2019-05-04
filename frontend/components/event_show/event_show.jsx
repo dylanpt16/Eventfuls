@@ -16,16 +16,18 @@ class EventShow extends React.Component {
   }
 
   componentWillMount() {
-    if( isEmpty(this.props.event) ) {
-      this.props.fetchEvent(this.props.eventId);
-    }
+    this.props.fetchEventDetails(this.props.eventId);
   }
 
   handleAttendButton(e) {
     e.preventDefault();
     const hasJoined = this.props.event.joined_by_current_user;
-    const eventId = this.props.eventId;
-    hasJoined ? this.props.destroyAttendance(eventId) : this.props.createAttendance(eventId);
+    const attendance = { event_id: this.props.eventId};
+    if (!this.props.joined_by_current_user) {
+      this.props.createAttendance({attendance});
+    }else {
+      this.props.destroyAttendance({attendance});
+    }
   }
 
   renderJoinButton() {
@@ -50,7 +52,6 @@ class EventShow extends React.Component {
       description,
       picture_url,
       date,
-      attendance_count,
       lat,
       lng,
       event_location,
@@ -82,7 +83,7 @@ class EventShow extends React.Component {
           </span>
           <br />
           <span className="event-show-people">
-            { attendance_count } people going
+            { this.props.attendees.length } people going
           </span>
           <br />
           { this.renderJoinButton() }
@@ -98,11 +99,11 @@ class EventShow extends React.Component {
         description,
         picture_url,
         date,
-        attendance_count,
         event_location,
         host,
-        attendees,
       } = this.props.event;
+
+      const attendees = this.props.attendees;
 
       return (
         <div className="event-show-container">

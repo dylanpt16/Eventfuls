@@ -6,19 +6,6 @@ export const RECEIVE_EVENT = 'RECEIVE_EVENT';
 export const RECEIVE_LOCATION = 'RECEIVE_LOCATION';
 export const RECEIVE_EVENT_ERRORS = 'RECEIVE_EVENT_ERRORS';
 
-export const RECEIVE_ATTENDANCE = "RECEIVE_ATTENDANCE";
-export const REMOVE_ATTENDANCE = "REMOVE_ATTENDANCE";
-
-export const receiveAttendance = attendance => ({
-  type: RECEIVE_ATTENDANCE,
-  attendance
-});
-
-export const removeAttendance = event => ({
-  type: REMOVE_ATTENDANCE,
-  event
-});
-
 export const receiveEvents = events => ({
   type: RECEIVE_EVENTS,
   events

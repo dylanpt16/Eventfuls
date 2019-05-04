@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :groups, only: [:index, :show, :create]
     resources :events, only: [:index, :show, :create]
-    resources :attendances, only: [:create]
+    resources :attendances, only: [:index, :create]
     delete '/attendances', to: 'attendances#destroy'
     resources :memberships, only: [:create, :index]
     delete '/memberships', to: 'memberships#destroy'

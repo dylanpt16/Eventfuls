@@ -21,7 +21,7 @@ const mapStateToProps = (state, { match }) => {
     groupId,
     group,
     members,
-    joined_by_current_user: Boolean(state.entities.memberships[currentUserId]),
+    joined_by_current_user: Boolean(state.entities.members[currentUserId]),
   };
 };
 

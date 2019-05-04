@@ -1,25 +1,33 @@
 class Api::AttendancesController < ApplicationController
   def index
-    @attendances = Attendance.all
+    @attendances = Attendance.where(event_id: params[:event_id])
   end
 
   def create
-    @attendance = Attendance.new
+    @attendance = Attendance.new(attendance_params)
     @attendance.user_id = current_user.id
-    @attendance.event_id = params[:event_id]
     if @attendance.save
-      @event = @attendance.event
-      render 'api/events/show'
+      render :show
+    else
+      render json: @attendance, status: :unprocessable_entity
     end
   end
 
   def destroy
     @attendance = Attendance.find_by(
       user_id: current_user.id,
-      event_id: params[:event_id]
+      event_id: params[:attendance][:event_id]
     )
     @attendance.destroy
-    @event = Event.find(params[:event_id])
-    render 'api/events/show'
+    @attendances = Attendance.where(event_id: params[:attendance][:event_id])
+    render :index
+  end
+
+  private
+
+  def attendance_params
+    params.require(:attendance).permit(
+      :event_id
+    )
   end
 end
