@@ -31,7 +31,6 @@ class EventShow extends React.Component {
   }
 
   renderJoinButton() {
-    const hasJoined = this.props.event.joined_by_current_user;
     const isOwner = this.props.event.owned_by_current_user;
     if(!isOwner) {
       return (
