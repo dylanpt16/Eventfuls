@@ -75,17 +75,17 @@ button.btn.btn-secondary.btn-lg.disabled {
 
 .event-index-item, .group-index-item {
   width: 300px;
-  height: 200px;
+  height: 300px;
+  display: flex;
 }
 
 .index-item-info {
-  height: 100%;
-  width: 100%;
+  margin: auto;
 }
 
 .index-item-info > img {
-  width: 80%;
-  height: 80%;
+  width: 200px;
+  height: 200px;
   margin: auto;
 }
 

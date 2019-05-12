@@ -10,7 +10,7 @@ const noEvent = () => (
 
 const renderEvent = ({ events }) => (
   <div className="map-search-results-container">
-    <h1>Events Around You: </h1>
+    <h1>Events Around You ({events.length}): </h1>
     <div className="map-search-results">
       {events.map(event => (
         <EventIndexItem

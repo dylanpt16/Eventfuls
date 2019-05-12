@@ -127,3 +127,24 @@ img.user-img {
   width: 50px;
   margin: auto;
 }
+
+#event-details-right p {
+  padding: 0 20px 0 0;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.attendance-index-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.attendance-index {
+  overflow: scroll;
+}
+
+.member-container, .member-index {
+  text-align: center;
+}

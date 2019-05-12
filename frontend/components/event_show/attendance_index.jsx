@@ -3,11 +3,11 @@ import React from 'react';
 import AttendanceIndexItem from './attendance_index_item';
 
 const AttendanceIndex = ({ attendees }) => (
-  <div className="attendance-index">
+  <div className="attendance-index-container">
     <div>
-      <h2>Attendees</h2>
+      <h2>Attendees ({attendees.length})</h2>
     </div>
-    <div>
+    <div className="attendance-index">
       { attendees.map( attendee => (
         <AttendanceIndexItem
           attendee={attendee}
