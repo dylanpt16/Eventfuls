@@ -53,7 +53,7 @@ Event.destroy_all
 Event.create({
   name: 'Introduction to Microsoft Visual Studio Team Services with Andrew Cook',
   description: 'Years ago when deploying software you would have to follow a tedious multistep process. A process which would fail under the smallest of errors and inevitably there were errors. Luckily today there are tools to automate not old the deployment process but also the build process. This allows teams and individuals to setup and use continuous integration and continuous deployment. We’ll explore setting up a Git repository, automating builds and deployments from that repository, setting up project work and bug tracking, and creating load tests to measure performance. Microsoft Visual Studio Team Services (https://docs.microsoft.com/en-us/vsts/user-guide/what-is-vsts) is a cloud service for collaborating on code development. It provides an integrated set of features that you access through your web browser or IDE client, including: Git repositories for source control of your codeBuild and release management to support continuous integration and delivery of your apps. Agile tools to support planning and tracking your work, code defects, and issues using Kanban and Scrum methods. A variety of tools to test your apps, including manual/exploratory testing, load testing, and continuous testing. Highly customizable dashboards for sharing progress and trends. Built-in wiki for sharing information with your team.',
-  owner_id: 1,
+  owner_id: 8,
   lat: 47.61593058326686,
   lng: -122.29035708540039,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png",
@@ -80,7 +80,7 @@ Event.create({
 Event.create({
   name: 'NEW! Software Craftsmanship - Eastside',
   description: 'MicroObject Development is an approach to Object Oriented Programming with Single Responsibility as the core principle guiding principle for how behavior is encapsulated. This core principle is supported by Encapsulation, Behavior, and Immutability. Along with how microObjects uses these principles, Quinn will talk about hands-on-keyboard practices that he and other developers use to produce simple, maintainable, and easily testable code.',
-  owner_id: 1,
+  owner_id: 8,
   lat: 47.61222752651438,
   lng: -122.3046049796875,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989479/profile_event.png",
@@ -107,7 +107,7 @@ Event.create({
 Event.create({
   name: 'Hack Night @ ATLAS Workbase',
   description: 'Beginner or experienced developer, come join us at ATLAS Workbase to work on whatever coding project you would like to work on. If you are looking for some guidance, we will try to help you with that too!',
-  owner_id: 1,
+  owner_id: 8,
   lat: 47.60551506776583,
   lng: -122.31473300092773,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png",
@@ -116,7 +116,7 @@ Event.create({
 Event.create({
   name: 'Introduction to Microsoft Visual Studio Team Services with Andrew Cook 2',
   description: 'Years ago when deploying software you would have to follow a tedious multistep process. A process which would fail under the smallest of errors and inevitably there were errors. Luckily today there are tools to automate not old the deployment process but also the build process. This allows teams and individuals to setup and use continuous integration and continuous deployment. We’ll explore setting up a Git repository, automating builds and deployments from that repository, setting up project work and bug tracking, and creating load tests to measure performance. Microsoft Visual Studio Team Services (https://docs.microsoft.com/en-us/vsts/user-guide/what-is-vsts) is a cloud service for collaborating on code development. It provides an integrated set of features that you access through your web browser or IDE client, including: Git repositories for source control of your codeBuild and release management to support continuous integration and delivery of your apps. Agile tools to support planning and tracking your work, code defects, and issues using Kanban and Scrum methods. A variety of tools to test your apps, including manual/exploratory testing, load testing, and continuous testing. Highly customizable dashboards for sharing progress and trends. Built-in wiki for sharing information with your team.',
-  owner_id: 1,
+  owner_id: 8,
   lat: 47.66667542029996,
   lng: -122.32547934147533,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png",
@@ -143,7 +143,7 @@ Event.create({
 Event.create({
   name: 'NEW! Software Craftsmanship - Eastside 2',
   description: 'MicroObject Development is an approach to Object Oriented Programming with Single Responsibility as the core principle guiding principle for how behavior is encapsulated. This core principle is supported by Encapsulation, Behavior, and Immutability. Along with how microObjects uses these principles, Quinn will talk about hands-on-keyboard practices that he and other developers use to produce simple, maintainable, and easily testable code.',
-  owner_id: 1,
+  owner_id: 8,
   lat: 47.669449844521644,
   lng: -122.33526403996166,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989479/profile_event.png",
@@ -170,7 +170,7 @@ Event.create({
 Event.create({
   name: 'Hack Night @ ATLAS Workbase 2',
   description: 'Beginner or experienced developer, come join us at ATLAS Workbase to work on whatever coding project you would like to work on. If you are looking for some guidance, we will try to help you with that too!',
-  owner_id: 1,
+  owner_id: 8,
   lat: 47.67037461982262,
   lng: -122.31432135197338,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png",
@@ -178,7 +178,7 @@ Event.create({
 Event.create({
   name: 'Introduction to Microsoft Visual Studio Team Services with Andrew Cook 3',
   description: 'Years ago when deploying software you would have to follow a tedious multistep process. A process which would fail under the smallest of errors and inevitably there were errors. Luckily today there are tools to automate not old the deployment process but also the build process. This allows teams and individuals to setup and use continuous integration and continuous deployment. We’ll explore setting up a Git repository, automating builds and deployments from that repository, setting up project work and bug tracking, and creating load tests to measure performance. Microsoft Visual Studio Team Services (https://docs.microsoft.com/en-us/vsts/user-guide/what-is-vsts) is a cloud service for collaborating on code development. It provides an integrated set of features that you access through your web browser or IDE client, including: Git repositories for source control of your codeBuild and release management to support continuous integration and delivery of your apps. Agile tools to support planning and tracking your work, code defects, and issues using Kanban and Scrum methods. A variety of tools to test your apps, including manual/exploratory testing, load testing, and continuous testing. Highly customizable dashboards for sharing progress and trends. Built-in wiki for sharing information with your team.',
-  owner_id: 1,
+  owner_id: 8,
   lat: 47.666906627951306,
   lng: -122.29870016667064,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png",
@@ -205,7 +205,7 @@ Event.create({
 Event.create({
   name: 'NEW! Software Craftsmanship - Eastside 3',
   description: 'MicroObject Development is an approach to Object Oriented Programming with Single Responsibility as the core principle guiding principle for how behavior is encapsulated. This core principle is supported by Encapsulation, Behavior, and Immutability. Along with how microObjects uses these principles, Quinn will talk about hands-on-keyboard practices that he and other developers use to produce simple, maintainable, and easily testable code.',
-  owner_id: 1,
+  owner_id: 8,
   lat: 47.66667542029996,
   lng: -122.28960211369213,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989479/profile_event.png",
@@ -232,7 +232,7 @@ Event.create({
 Event.create({
   name: 'Hack Night @ ATLAS Workbase 3',
   description: 'Beginner or experienced developer, come join us at ATLAS Workbase to work on whatever coding project you would like to work on. If you are looking for some guidance, we will try to help you with that too!',
-  owner_id: 1,
+  owner_id: 8,
   lat: 47.68859997269333,
   lng: -122.33160626355249,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png",
@@ -243,10 +243,10 @@ users = User.all
 
 events.each do |event|
   users.sample(rand(1..40)).each do |user|
-  Attendance.create({
-    event_id: event.id,
-    user_id: user.id
-  })
+    Attendance.create({
+      event_id: event.id,
+      user_id: user.id
+    })
   end
 end
 
@@ -255,7 +255,7 @@ groups = []
 groups << {
   name: 'Introduction to Microsoft Visual Studio Team Services with Andrew Cook',
   description: 'Years ago when deploying software you would have to follow a tedious multistep process. A process which would fail under the smallest of errors and inevitably there were errors. Luckily today there are tools to automate not old the deployment process but also the build process. This allows teams and individuals to setup and use continuous integration and continuous deployment. We’ll explore setting up a Git repository, automating builds and deployments from that repository, setting up project work and bug tracking, and creating load tests to measure performance. Microsoft Visual Studio Team Services (https://docs.microsoft.com/en-us/vsts/user-guide/what-is-vsts) is a cloud service for collaborating on code development. It provides an integrated set of features that you access through your web browser or IDE client, including: Git repositories for source control of your codeBuild and release management to support continuous integration and delivery of your apps. Agile tools to support planning and tracking your work, code defects, and issues using Kanban and Scrum methods. A variety of tools to test your apps, including manual/exploratory testing, load testing, and continuous testing. Highly customizable dashboards for sharing progress and trends. Built-in wiki for sharing information with your team.',
-  owner_id: 1,
+  owner_id: 8,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png"
 }
 
@@ -276,7 +276,7 @@ groups << {
 groups << {
   name: 'NEW! Software Craftsmanship - Eastside',
   description: 'MicroObject Development is an approach to Object Oriented Programming with Single Responsibility as the core principle guiding principle for how behavior is encapsulated. This core principle is supported by Encapsulation, Behavior, and Immutability. Along with how microObjects uses these principles, Quinn will talk about hands-on-keyboard practices that he and other developers use to produce simple, maintainable, and easily testable code.',
-  owner_id: 1,
+  owner_id: 8,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989479/profile_event.png"
 }
 
@@ -297,14 +297,14 @@ groups << {
 groups << {
   name: 'Hack Night @ ATLAS Workbase',
   description: 'Beginner or experienced developer, come join us at ATLAS Workbase to work on whatever coding project you would like to work on. If you are looking for some guidance, we will try to help you with that too!',
-  owner_id: 1,
+  owner_id: 8,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png"
 }
 
 groups << {
   name: 'Introduction to Microsoft Visual Studio Team Services with Andrew Cook 2',
   description: 'Years ago when deploying software you would have to follow a tedious multistep process. A process which would fail under the smallest of errors and inevitably there were errors. Luckily today there are tools to automate not old the deployment process but also the build process. This allows teams and individuals to setup and use continuous integration and continuous deployment. We’ll explore setting up a Git repository, automating builds and deployments from that repository, setting up project work and bug tracking, and creating load tests to measure performance. Microsoft Visual Studio Team Services (https://docs.microsoft.com/en-us/vsts/user-guide/what-is-vsts) is a cloud service for collaborating on code development. It provides an integrated set of features that you access through your web browser or IDE client, including: Git repositories for source control of your codeBuild and release management to support continuous integration and delivery of your apps. Agile tools to support planning and tracking your work, code defects, and issues using Kanban and Scrum methods. A variety of tools to test your apps, including manual/exploratory testing, load testing, and continuous testing. Highly customizable dashboards for sharing progress and trends. Built-in wiki for sharing information with your team.',
-  owner_id: 1,
+  owner_id: 8,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png"
 }
 
@@ -325,7 +325,7 @@ groups << {
 groups << {
   name: 'NEW! Software Craftsmanship - Eastside 2',
   description: 'MicroObject Development is an approach to Object Oriented Programming with Single Responsibility as the core principle guiding principle for how behavior is encapsulated. This core principle is supported by Encapsulation, Behavior, and Immutability. Along with how microObjects uses these principles, Quinn will talk about hands-on-keyboard practices that he and other developers use to produce simple, maintainable, and easily testable code.',
-  owner_id: 1,
+  owner_id: 8,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989479/profile_event.png"
 }
 
@@ -346,14 +346,14 @@ groups << {
 groups << {
   name: 'Hack Night @ ATLAS Workbase 2',
   description: 'Beginner or experienced developer, come join us at ATLAS Workbase to work on whatever coding project you would like to work on. If you are looking for some guidance, we will try to help you with that too!',
-  owner_id: 1,
+  owner_id: 8,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png"
 }
 
 groups << {
   name: 'Introduction to Microsoft Visual Studio Team Services with Andrew Cook 3',
   description: 'Years ago when deploying software you would have to follow a tedious multistep process. A process which would fail under the smallest of errors and inevitably there were errors. Luckily today there are tools to automate not old the deployment process but also the build process. This allows teams and individuals to setup and use continuous integration and continuous deployment. We’ll explore setting up a Git repository, automating builds and deployments from that repository, setting up project work and bug tracking, and creating load tests to measure performance. Microsoft Visual Studio Team Services (https://docs.microsoft.com/en-us/vsts/user-guide/what-is-vsts) is a cloud service for collaborating on code development. It provides an integrated set of features that you access through your web browser or IDE client, including: Git repositories for source control of your codeBuild and release management to support continuous integration and delivery of your apps. Agile tools to support planning and tracking your work, code defects, and issues using Kanban and Scrum methods. A variety of tools to test your apps, including manual/exploratory testing, load testing, and continuous testing. Highly customizable dashboards for sharing progress and trends. Built-in wiki for sharing information with your team.',
-  owner_id: 1,
+  owner_id: 8,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png"
 }
 
@@ -374,7 +374,7 @@ groups << {
 groups << {
   name: 'NEW! Software Craftsmanship - Eastside 3',
   description: 'MicroObject Development is an approach to Object Oriented Programming with Single Responsibility as the core principle guiding principle for how behavior is encapsulated. This core principle is supported by Encapsulation, Behavior, and Immutability. Along with how microObjects uses these principles, Quinn will talk about hands-on-keyboard practices that he and other developers use to produce simple, maintainable, and easily testable code.',
-  owner_id: 1,
+  owner_id: 8,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989479/profile_event.png"
 }
 
@@ -395,14 +395,14 @@ groups << {
 groups << {
   name: 'Hack Night @ ATLAS Workbase 3',
   description: 'Beginner or experienced developer, come join us at ATLAS Workbase to work on whatever coding project you would like to work on. If you are looking for some guidance, we will try to help you with that too!',
-  owner_id: 1,
+  owner_id: 8,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png"
 }
 
 groups << {
   name: 'Introduction to Microsoft Visual Studio Team Services with Andrew Cook 4',
   description: 'Years ago when deploying software you would have to follow a tedious multistep process. A process which would fail under the smallest of errors and inevitably there were errors. Luckily today there are tools to automate not old the deployment process but also the build process. This allows teams and individuals to setup and use continuous integration and continuous deployment. We’ll explore setting up a Git repository, automating builds and deployments from that repository, setting up project work and bug tracking, and creating load tests to measure performance. Microsoft Visual Studio Team Services (https://docs.microsoft.com/en-us/vsts/user-guide/what-is-vsts) is a cloud service for collaborating on code development. It provides an integrated set of features that you access through your web browser or IDE client, including: Git repositories for source control of your codeBuild and release management to support continuous integration and delivery of your apps. Agile tools to support planning and tracking your work, code defects, and issues using Kanban and Scrum methods. A variety of tools to test your apps, including manual/exploratory testing, load testing, and continuous testing. Highly customizable dashboards for sharing progress and trends. Built-in wiki for sharing information with your team.',
-  owner_id: 1,
+  owner_id: 8,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png"
 }
 
@@ -423,7 +423,7 @@ groups << {
 groups << {
   name: 'NEW! Software Craftsmanship - Eastside 4',
   description: 'MicroObject Development is an approach to Object Oriented Programming with Single Responsibility as the core principle guiding principle for how behavior is encapsulated. This core principle is supported by Encapsulation, Behavior, and Immutability. Along with how microObjects uses these principles, Quinn will talk about hands-on-keyboard practices that he and other developers use to produce simple, maintainable, and easily testable code.',
-  owner_id: 1,
+  owner_id: 8,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989479/profile_event.png"
 }
 
@@ -444,40 +444,47 @@ groups << {
 groups << {
   name: 'Hack Night @ ATLAS Workbase 4',
   description: 'Beginner or experienced developer, come join us at ATLAS Workbase to work on whatever coding project you would like to work on. If you are looking for some guidance, we will try to help you with that too!',
-  owner_id: 1,
+  owner_id: 8,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png"
 }
 
 location = [
-  {lat: 47.58023822657021, lng: -122.3009429150253},
-  {lat: 47.57641683919894, lng: -122.30446197325284},
-  {lat: 47.577864367229786, lng: -122.28729583555753},
-  {lat: 47.584811944735, lng: -122.3060927563339},
-  {lat: 47.583364608787335, lng: -122.31210090452726},
-  {lat: 47.57577991418771, lng: -122.30883933836515},
-  {lat: 47.574969271150216, lng: -122.29270316893155},
-  {lat: 47.571147499222434, lng: -122.28918411070401},
-  {lat: 47.57479556029516, lng: -122.30514861876065},
-  {lat: 47.577227459826396, lng: -122.31356002623136},
-  {lat: 47.584175121848105, lng: -122.3115859203964},
-  {lat: 47.58452248074683, lng: -122.296565549913},
-  {lat: 47.57670634800652, lng: -122.2925315075546},
-  {lat: 47.572479360496104, lng: -122.28952743345792},
-  {lat: 47.57670634800652, lng: -122.30635024839933},
-  {lat: 47.58475405206541, lng: -122.30489112669522},
-  {lat: 47.587590717579545, lng: -122.31029846006925},
-  {lat: 47.58133827123204, lng: -122.3104701214462},
-  {lat: 47.5771695587692, lng: -122.29819633299405},
-  {lat: 47.584175121848105, lng: -122.30686523253019},
-  {lat: 47.579775042955475, lng: -122.29682304197843},
-  {lat: 47.57549040025782, lng: -122.31124259764249},
-  {lat: 47.60921859981483, lng: -122.30872485273437},
-  {lat: 47.61558343283594, lng: -122.34116885297851},
-  {lat: 47.62055903544943, lng: -122.33052584760742},
-  {lat: 47.609287877609994, lng: -122.31782913208008},
-  {lat: 47.610028712494476, lng: -122.33258578413086},
-  {lat: 47.607482601818226, lng: -122.32280108564453},
-  {lat: 47.62055903544943, lng: -122.33104083173828}
+  {lat: 47.59392551032141, lng: -122.2954210960205},
+  {lat: 47.59948194082594, lng: -122.31344554060058},
+  {lat: 47.60839414897103, lng: -122.31018397443847},
+  {lat: 47.59901892748712, lng: -122.30400416486816},
+  {lat: 47.600176453151306, lng: -122.31499049299316},
+  {lat: 47.59936618787536, lng: -122.32048365705566},
+  {lat: 47.58709492277835, lng: -122.31138560407715},
+  {lat: 47.601796946057185, lng: -122.30297419660644},
+  {lat: 47.60769974574087, lng: -122.31378886335449},
+  {lat: 47.61151884941966, lng: -122.30726573103027},
+  {lat: 47.60574654620158, lng: -122.31207224958496},
+  {lat: 47.588730151838895, lng: -122.31550547712402},
+  {lat: 47.59289794377609, lng: -122.32065531843261},
+  {lat: 47.61303759258633, lng: -122.33335826032715},
+  {lat: 47.61512056200957, lng: -122.34142634504394},
+  {lat: 47.61998050133359, lng: -122.34794947736816},
+  {lat: 47.60690392301495, lng: -122.30211588972168},
+  {lat: 47.60250575488373, lng: -122.31687876813965},
+  {lat: 47.60285299212841, lng: -122.30520579450683},
+  {lat: 47.61512056200957, lng: -122.34382960432129},
+  {lat: 47.62252600355668, lng: -122.33267161481933},
+  {lat: 47.61222752651438, lng: -122.30537745588379},
+  {lat: 47.60458914377918, lng: -122.30709406965332},
+  {lat: 47.59938051596381, lng: -122.30108592145996},
+  {lat: 47.60169552568297, lng: -122.31327387922363},
+  {lat: 47.61107026750146, lng: -122.33164164655761},
+  {lat: 47.614541967714715, lng: -122.30795237653808},
+  {lat: 47.601116782856714, lng: -122.30417582624511},
+  {lat: 47.59590780931307, lng: -122.29662272565918},
+  {lat: 47.60146402932075, lng: -122.31293055646972},
+  {lat: 47.606556712659874, lng: -122.32065531843261},
+  {lat: 47.606556712659874, lng: -122.30881068342285},
+  {lat: 47.60030653214403, lng: -122.30846736066894},
+  {lat: 47.60574654620158, lng: -122.31893870466308},
+  {lat: 47.61176462598224, lng: -122.30932566755371},
+  {lat: 47.602390008623345, lng: -122.30760905378418},
 ]
 
 i = 0
@@ -490,9 +497,48 @@ groups = Group.all
 
 groups.each do |group|
   users.sample(rand(1..40)).each do |user|
-  Membership.create({
-    group_id: group.id,
-    user_id: user.id
-  })
+    Membership.create({
+      group_id: group.id,
+      user_id: user.id
+    })
+  end
+end
+
+postStrings = [
+  "The meeting next week is cancelled..",
+  "See you all tonight!",
+  "There's an upcoming meeting this Friday!",
+  "No meeting this week",
+  "We have a special guest this meeting",
+  "A reminder, there's a meeting this weekend"
+]
+
+replyStrings = [
+  "See you all!",
+  "Sure",
+  "See you soon",
+  "I cannot go. Sorry",
+  "Thanks!"
+]
+
+groups.each do |group|
+  postStrings.sample(rand(1..6)).each do |str|
+    Announcement.create({
+      group_id: group.id,
+      user_id: group.owner_id,
+      content: str
+    })
+  end
+end
+
+posts = Announcement.all
+
+posts.each do |post|
+  replyStrings.sample(rand(1..5)).each do |str|
+    Reply.create({
+      announcement_id: post.id,
+      user_id: rand(1..40),
+      content: str
+    })
   end
 end
