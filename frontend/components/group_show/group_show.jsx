@@ -62,6 +62,7 @@ class GroupShow extends React.Component {
 
   renderGroupDetails() {
     const { members } = this.props;
+    const { description } = this.props.group;
 
     return(
       <div className="row event-details-container">
@@ -79,6 +80,10 @@ class GroupShow extends React.Component {
             <h2 className="event-show-time">
               Description
             </h2>
+            <br />
+            <p>
+              { description }
+            </p>
           </div>
         </div>
       </div>

@@ -22,7 +22,7 @@ class Api::GroupsController < ApplicationController
   end
 
   def index
-    @groups = Group.all
+    @groups = bounds ? Group.in_bounds(bounds) : Group.all
   end
 
   private
@@ -37,4 +37,7 @@ class Api::GroupsController < ApplicationController
     )
   end
 
+  def bounds
+    params[:bounds]
+  end
 end

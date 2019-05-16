@@ -9,13 +9,14 @@ class MarkerManager {
     const eventsObj = {};
     events.forEach( event => eventsObj[event.id] = event);
 
+    if( this.markers ) {
+      Object.keys(this.markers)
+        .forEach((eventId) => this.removeMarker(this.markers[eventId]))
+    }
+
     events
       .filter(event => !this.markers[event.id])
       .forEach(newEvent => this.createMarkerFromEvent(newEvent, this.handleClick))
-
-    Object.keys(this.markers)
-      .filter(eventId => !eventsObj[eventId])
-      .forEach((eventId) => this.removeMarker(this.markers[eventId]))
   }
 
   createMarkerFromEvent(event) {
