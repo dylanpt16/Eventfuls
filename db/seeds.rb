@@ -50,196 +50,189 @@ User.create({username: 'guest39', password: 'foobar', name: "Sam Lucas"})
 User.create({username: 'guest40', password: 'foobar', name: "Ashleigh Santana"})
 
 Event.destroy_all
-Event.create({
+events = []
+events << {
   name: 'Introduction to Microsoft Visual Studio Team Services with Andrew Cook',
   description: 'Years ago when deploying software you would have to follow a tedious multistep process. A process which would fail under the smallest of errors and inevitably there were errors. Luckily today there are tools to automate not old the deployment process but also the build process. This allows teams and individuals to setup and use continuous integration and continuous deployment. We’ll explore setting up a Git repository, automating builds and deployments from that repository, setting up project work and bug tracking, and creating load tests to measure performance. Microsoft Visual Studio Team Services (https://docs.microsoft.com/en-us/vsts/user-guide/what-is-vsts) is a cloud service for collaborating on code development. It provides an integrated set of features that you access through your web browser or IDE client, including: Git repositories for source control of your codeBuild and release management to support continuous integration and delivery of your apps. Agile tools to support planning and tracking your work, code defects, and issues using Kanban and Scrum methods. A variety of tools to test your apps, including manual/exploratory testing, load testing, and continuous testing. Highly customizable dashboards for sharing progress and trends. Built-in wiki for sharing information with your team.',
   owner_id: 8,
-  lat: 47.61593058326686,
-  lng: -122.29035708540039,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png",
-  date: DateTime.new(2018,2,3,4,5,6)})
+  date: DateTime.new(2018,2,3,4,5,6)}
 
-Event.create({
+events << {
   name: 'NSCoder Night (Wayward Coffeehouse, Seattle)',
   description: 'NSCoder Night is held every Tuesday evening at Wayward Coffeehouse. It is an informal gathering of Mac and iOS application developers where people can code, talk shop, ask and answer questions, and find some willing victims for project demonstrations. There is no program, and there is a wide range of experience levels. You will find us spread over several tables in the back. We are generally there from about 7 until about 10, with people dropping in all through the evening. No RSVP is needed for this event. It is very informal. Everyone is welcome for all or part of the evening. Bring your MacBook and your iOS or Mac applications in development. Experience levels vary from raw beginner to seasoned expert, and attendance is typically 10 to 20 people.',
   owner_id: 2,
-  lat: 47.60204276830558,
-  lng: -122.29670855634765,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1517614425/eventfuls/1_iW7i51bEZSnoPwGgWW93Kg.jpg",
-  date: DateTime.new(2018,3,3,4,5,6)})
+  date: DateTime.new(2018,3,3,4,5,6)}
 
-Event.create({
+events << {
   name: 'WordPress Developers (restarting for 2018!): Advanced Custom Fields deep-dive',
   description: 'We are relaunching the WordPress Developer meetup. Join us on March 13th at WeWork in South Lake Union to get into the code side of WordPress, from plugins, to themes, and beyond. Learn something new, network with your fellow developers, share what you’d like to see at the next Developer Meetup, and help us build a better WordPress developer community here in Seattle. Healthy websites change over time just like healthy businesses do. As developers, it is our job to empower website admins, and make our sites more maintainable. This talk shares design patterns and best practices you will find invaluable when creating custom themes for clients, and demonstrates how to implement them using Advanced Custom Fields (ACF). ACF is a powerful development tool used to easily manage custom fields and data. Since the possibilities are endless, we will explore a handful of specific examples.',
   owner_id: 3,
-  lat: 47.61847628267118,
-  lng: -122.29859683149414,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518663169/eventfuls/imbf9ozrndsmiyb1yn6v.png",
-  date: DateTime.new(2018,4,3,4,5,6)})
+  date: DateTime.new(2018,4,3,4,5,6)}
 
-Event.create({
+events << {
   name: 'NEW! Software Craftsmanship - Eastside',
   description: 'MicroObject Development is an approach to Object Oriented Programming with Single Responsibility as the core principle guiding principle for how behavior is encapsulated. This core principle is supported by Encapsulation, Behavior, and Immutability. Along with how microObjects uses these principles, Quinn will talk about hands-on-keyboard practices that he and other developers use to produce simple, maintainable, and easily testable code.',
   owner_id: 8,
-  lat: 47.61222752651438,
-  lng: -122.3046049796875,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989479/profile_event.png",
-  date: DateTime.new(2018,5,3,4,5,6)})
+  date: DateTime.new(2018,5,3,4,5,6)}
 
-Event.create({
+events << {
   name: 'Webinar - Excel and Power BI Clinic)',
   description: 'FREE Excel & Power BI Clinic - Solving real world Excel and Power BI Problems occurs every third Thursday of each month from 9am to 10am Central African Time (CAT). Please register for the date and time that works best for you: Get your (on the Job) Excel & Power BI questions ready for our monthly live Clinic. David is a Power Pivot, DAX, Excel and Financial Modelling guru, he is also an ATD Master Trainer. He has taught over 4000 participants in the past 22 years of working with Excel and now also working Power BI since its beta launch as Power Pivot in Excel 2010. Learn how to apply Excel & Power BI tools to solve real-world challenges you face at work. This is distinct from the IT-centric approach to solving problems. Excel and Power BI are productivity tools afterall and not just IT software. Spaces are limited, so book your spot today and get your questions ready. This webinar runs every month. After registering, you will receive a confirmation email containing information about joining the webinar.',
   owner_id: 2,
-  lat: 47.60285299212841,
-  lng: -122.31095645063476,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989610/profile_event2.png",
-  date: DateTime.new(2018,6,3,4,5,6)})
+  date: DateTime.new(2018,6,3,4,5,6)}
 
-Event.create({
+events << {
   name: 'Tech Happy Hour',
   description: 'Complete your Thursday with Tech Happy Hour! Enjoy food from different culture & mingle with our growing TECH community. ENJOY, LEARN & CELEBRATE THE DIFFERENCE ! ABOUT OUR TECH FRIENDLY COMMUNITY extraSlice is more than just a co-working space, it’s a Tech Innovation Place that embraces 3Cs – Community. Culture. Collaboration . Our purpose is to create an environment that allows you to focus on what’s really important, getting your work done, meet interesting people and learning. All these in one place!',
   owner_id: 3,
-  lat: 47.61199607676047,
-  lng: -122.31095645063476,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989689/profile_event3.png",
-  date: DateTime.new(2018,7,3,4,5,6)})
+  date: DateTime.new(2018,7,3,4,5,6)}
 
-Event.create({
+events << {
   name: 'Hack Night @ ATLAS Workbase',
   description: 'Beginner or experienced developer, come join us at ATLAS Workbase to work on whatever coding project you would like to work on. If you are looking for some guidance, we will try to help you with that too!',
   owner_id: 8,
-  lat: 47.60551506776583,
-  lng: -122.31473300092773,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png",
-  date: DateTime.new(2018,8,3,4,5,6)})
+  date: DateTime.new(2018,8,3,4,5,6)}
 
-Event.create({
+events << {
   name: 'Introduction to Microsoft Visual Studio Team Services with Andrew Cook 2',
   description: 'Years ago when deploying software you would have to follow a tedious multistep process. A process which would fail under the smallest of errors and inevitably there were errors. Luckily today there are tools to automate not old the deployment process but also the build process. This allows teams and individuals to setup and use continuous integration and continuous deployment. We’ll explore setting up a Git repository, automating builds and deployments from that repository, setting up project work and bug tracking, and creating load tests to measure performance. Microsoft Visual Studio Team Services (https://docs.microsoft.com/en-us/vsts/user-guide/what-is-vsts) is a cloud service for collaborating on code development. It provides an integrated set of features that you access through your web browser or IDE client, including: Git repositories for source control of your codeBuild and release management to support continuous integration and delivery of your apps. Agile tools to support planning and tracking your work, code defects, and issues using Kanban and Scrum methods. A variety of tools to test your apps, including manual/exploratory testing, load testing, and continuous testing. Highly customizable dashboards for sharing progress and trends. Built-in wiki for sharing information with your team.',
   owner_id: 8,
-  lat: 47.66667542029996,
-  lng: -122.32547934147533,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png",
-  date: DateTime.new(2018,2,3,4,5,6)})
+  date: DateTime.new(2018,2,3,4,5,6)}
 
-Event.create({
+events << {
   name: 'NSCoder Night (Wayward Coffeehouse, Seattle 2)',
   description: 'NSCoder Night is held every Tuesday evening at Wayward Coffeehouse. It is an informal gathering of Mac and iOS application developers where people can code, talk shop, ask and answer questions, and find some willing victims for project demonstrations. There is no program, and there is a wide range of experience levels. You will find us spread over several tables in the back. We are generally there from about 7 until about 10, with people dropping in all through the evening. No RSVP is needed for this event. It is very informal. Everyone is welcome for all or part of the evening. Bring your MacBook and your iOS or Mac applications in development. Experience levels vary from raw beginner to seasoned expert, and attendance is typically 10 to 20 people.',
   owner_id: 2,
-  lat: 47.66112612941765,
-  lng: -122.34813864323314,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1517614425/eventfuls/1_iW7i51bEZSnoPwGgWW93Kg.jpg",
-  date: DateTime.new(2018,3,3,4,5,6)})
+  date: DateTime.new(2018,3,3,4,5,6)}
 
-Event.create({
+events << {
   name: 'WordPress Developers (restarting for 2018!) 2: Advanced Custom Fields deep-dive',
   description: 'We are relaunching the WordPress Developer meetup. Join us on March 13th at WeWork in South Lake Union to get into the code side of WordPress, from plugins, to themes, and beyond. Learn something new, network with your fellow developers, share what you’d like to see at the next Developer Meetup, and help us build a better WordPress developer community here in Seattle. Healthy websites change over time just like healthy businesses do. As developers, it is our job to empower website admins, and make our sites more maintainable. This talk shares design patterns and best practices you will find invaluable when creating custom themes for clients, and demonstrates how to implement them using Advanced Custom Fields (ACF). ACF is a powerful development tool used to easily manage custom fields and data. Since the possibilities are endless, we will explore a handful of specific examples.',
   owner_id: 3,
-  lat: 47.66424767812699,
-  lng: -122.32153112980541,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518663169/eventfuls/imbf9ozrndsmiyb1yn6v.png",
-  date: DateTime.new(2018,4,3,4,5,6)})
+  date: DateTime.new(2018,4,3,4,5,6)}
 
-Event.create({
+events << {
   name: 'NEW! Software Craftsmanship - Eastside 2',
   description: 'MicroObject Development is an approach to Object Oriented Programming with Single Responsibility as the core principle guiding principle for how behavior is encapsulated. This core principle is supported by Encapsulation, Behavior, and Immutability. Along with how microObjects uses these principles, Quinn will talk about hands-on-keyboard practices that he and other developers use to produce simple, maintainable, and easily testable code.',
   owner_id: 8,
-  lat: 47.669449844521644,
-  lng: -122.33526403996166,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989479/profile_event.png",
-  date: DateTime.new(2018,5,3,4,5,6)})
+  date: DateTime.new(2018,5,3,4,5,6)}
 
-Event.create({
+events << {
   name: 'Webinar - Excel and Power BI Clinic 2)',
   description: 'FREE Excel & Power BI Clinic - Solving real world Excel and Power BI Problems occurs every third Thursday of each month from 9am to 10am Central African Time (CAT). Please register for the date and time that works best for you: Get your (on the Job) Excel & Power BI questions ready for our monthly live Clinic. David is a Power Pivot, DAX, Excel and Financial Modelling guru, he is also an ATD Master Trainer. He has taught over 4000 participants in the past 22 years of working with Excel and now also working Power BI since its beta launch as Power Pivot in Excel 2010. Learn how to apply Excel & Power BI tools to solve real-world challenges you face at work. This is distinct from the IT-centric approach to solving problems. Excel and Power BI are productivity tools afterall and not just IT software. Spaces are limited, so book your spot today and get your questions ready. This webinar runs every month. After registering, you will receive a confirmation email containing information about joining the webinar.',
   owner_id: 2,
-  lat: 47.67255449415725,
-  lng: -122.30804443359375,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989610/profile_event2.png",
-  date: DateTime.new(2018,6,3,4,5,6)})
+  date: DateTime.new(2018,6,3,4,5,6)}
 
-Event.create({
+events << {
   name: 'Tech Happy Hour 2',
   description: 'Complete your Thursday with Tech Happy Hour! Enjoy food from different culture & mingle with our growing TECH community. ENJOY, LEARN & CELEBRATE THE DIFFERENCE ! ABOUT OUR TECH FRIENDLY COMMUNITY extraSlice is more than just a co-working space, it’s a Tech Innovation Place that embraces 3Cs – Community. Culture. Collaboration . Our purpose is to create an environment that allows you to focus on what’s really important, getting your work done, meet interesting people and learning. All these in one place!',
   owner_id: 3,
-  lat: 47.65916061409923,
-  lng: -122.33114416691478,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989689/profile_event3.png",
-  date: DateTime.new(2018,7,3,4,5,6)})
+  date: DateTime.new(2018,7,3,4,5,6)}
 
-Event.create({
+events << {
   name: 'Hack Night @ ATLAS Workbase 2',
   description: 'Beginner or experienced developer, come join us at ATLAS Workbase to work on whatever coding project you would like to work on. If you are looking for some guidance, we will try to help you with that too!',
   owner_id: 8,
-  lat: 47.67037461982262,
-  lng: -122.31432135197338,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png",
-  date: DateTime.new(2018,8,3,4,5,6)})
-Event.create({
+  date: DateTime.new(2018,8,3,4,5,6)}
+
+events << {
   name: 'Introduction to Microsoft Visual Studio Team Services with Andrew Cook 3',
   description: 'Years ago when deploying software you would have to follow a tedious multistep process. A process which would fail under the smallest of errors and inevitably there were errors. Luckily today there are tools to automate not old the deployment process but also the build process. This allows teams and individuals to setup and use continuous integration and continuous deployment. We’ll explore setting up a Git repository, automating builds and deployments from that repository, setting up project work and bug tracking, and creating load tests to measure performance. Microsoft Visual Studio Team Services (https://docs.microsoft.com/en-us/vsts/user-guide/what-is-vsts) is a cloud service for collaborating on code development. It provides an integrated set of features that you access through your web browser or IDE client, including: Git repositories for source control of your codeBuild and release management to support continuous integration and delivery of your apps. Agile tools to support planning and tracking your work, code defects, and issues using Kanban and Scrum methods. A variety of tools to test your apps, including manual/exploratory testing, load testing, and continuous testing. Highly customizable dashboards for sharing progress and trends. Built-in wiki for sharing information with your team.',
   owner_id: 8,
-  lat: 47.666906627951306,
-  lng: -122.29870016667064,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png",
-  date: DateTime.new(2018,2,3,4,5,6)})
+  date: DateTime.new(2018,2,3,4,5,6)}
 
-Event.create({
+events << {
   name: 'NSCoder Night (Wayward Coffeehouse, Seattle) 3',
   description: 'NSCoder Night is held every Tuesday evening at Wayward Coffeehouse. It is an informal gathering of Mac and iOS application developers where people can code, talk shop, ask and answer questions, and find some willing victims for project demonstrations. There is no program, and there is a wide range of experience levels. You will find us spread over several tables in the back. We are generally there from about 7 until about 10, with people dropping in all through the evening. No RSVP is needed for this event. It is very informal. Everyone is welcome for all or part of the evening. Bring your MacBook and your iOS or Mac applications in development. Experience levels vary from raw beginner to seasoned expert, and attendance is typically 10 to 20 people.',
   owner_id: 2,
-  lat: 47.67754107280815,
-  lng: -122.29681189152416,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1517614425/eventfuls/1_iW7i51bEZSnoPwGgWW93Kg.jpg",
-  date: DateTime.new(2018,3,3,4,5,6)})
+  date: DateTime.new(2018,3,3,4,5,6)}
 
-Event.create({
+events << {
   name: 'WordPress Developers (restarting for 2018!): Advanced Custom Fields deep-dive 3',
   description: 'We are relaunching the WordPress Developer meetup. Join us on March 13th at WeWork in South Lake Union to get into the code side of WordPress, from plugins, to themes, and beyond. Learn something new, network with your fellow developers, share what you’d like to see at the next Developer Meetup, and help us build a better WordPress developer community here in Seattle. Healthy websites change over time just like healthy businesses do. As developers, it is our job to empower website admins, and make our sites more maintainable. This talk shares design patterns and best practices you will find invaluable when creating custom themes for clients, and demonstrates how to implement them using Advanced Custom Fields (ACF). ACF is a powerful development tool used to easily manage custom fields and data. Since the possibilities are endless, we will explore a handful of specific examples.',
   owner_id: 3,
-  lat: 47.68355088740244,
-  lng: -122.30556662174877,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518663169/eventfuls/imbf9ozrndsmiyb1yn6v.png",
-  date: DateTime.new(2018,4,3,4,5,6)})
+  date: DateTime.new(2018,4,3,4,5,6)}
 
-Event.create({
+events << {
   name: 'NEW! Software Craftsmanship - Eastside 3',
   description: 'MicroObject Development is an approach to Object Oriented Programming with Single Responsibility as the core principle guiding principle for how behavior is encapsulated. This core principle is supported by Encapsulation, Behavior, and Immutability. Along with how microObjects uses these principles, Quinn will talk about hands-on-keyboard practices that he and other developers use to produce simple, maintainable, and easily testable code.',
   owner_id: 8,
-  lat: 47.66667542029996,
-  lng: -122.28960211369213,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989479/profile_event.png",
-  date: DateTime.new(2018,5,3,4,5,6)})
+  date: DateTime.new(2018,5,3,4,5,6)}
 
-Event.create({
+events << {
   name: 'Webinar - Excel and Power BI Clinic) 3',
   description: 'FREE Excel & Power BI Clinic - Solving real world Excel and Power BI Problems occurs every third Thursday of each month from 9am to 10am Central African Time (CAT). Please register for the date and time that works best for you: Get your (on the Job) Excel & Power BI questions ready for our monthly live Clinic. David is a Power Pivot, DAX, Excel and Financial Modelling guru, he is also an ATD Master Trainer. He has taught over 4000 participants in the past 22 years of working with Excel and now also working Power BI since its beta launch as Power Pivot in Excel 2010. Learn how to apply Excel & Power BI tools to solve real-world challenges you face at work. This is distinct from the IT-centric approach to solving problems. Excel and Power BI are productivity tools afterall and not just IT software. Spaces are limited, so book your spot today and get your questions ready. This webinar runs every month. After registering, you will receive a confirmation email containing information about joining the webinar.',
   owner_id: 2,
-  lat: 47.67858128256806,
-  lng: -122.28582556339916,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989610/profile_event2.png",
-  date: DateTime.new(2018,6,3,4,5,6)})
+  date: DateTime.new(2018,6,3,4,5,6)}
 
-Event.create({
+events << {
   name: 'Tech Happy Hour 3',
   description: 'Complete your Thursday with Tech Happy Hour! Enjoy food from different culture & mingle with our growing TECH community. ENJOY, LEARN & CELEBRATE THE DIFFERENCE ! ABOUT OUR TECH FRIENDLY COMMUNITY extraSlice is more than just a co-working space, it’s a Tech Innovation Place that embraces 3Cs – Community. Culture. Collaboration . Our purpose is to create an environment that allows you to focus on what’s really important, getting your work done, meet interesting people and learning. All these in one place!',
   owner_id: 3,
-  lat: 47.671530565905485,
-  lng: -122.33011419865306,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989689/profile_event3.png",
-  date: DateTime.new(2018,7,3,4,5,6)})
+  date: DateTime.new(2018,7,3,4,5,6)}
 
-Event.create({
+events << {
   name: 'Hack Night @ ATLAS Workbase 3',
   description: 'Beginner or experienced developer, come join us at ATLAS Workbase to work on whatever coding project you would like to work on. If you are looking for some guidance, we will try to help you with that too!',
   owner_id: 8,
-  lat: 47.68859997269333,
-  lng: -122.33160626355249,
   picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png",
-  date: DateTime.new(2018,8,3,4,5,6)})
+  date: DateTime.new(2018,8,3,4,5,6)}
 
-events = Event.all
+locations = [
+  {lat: 47.6255341645739, lng: -122.34777781599121},
+  {lat: 47.61998050133359, lng: -122.3115572654541},
+  {lat: 47.61743487516832, lng: -122.30125758283691},
+  {lat: 47.60586228503532, lng: -122.30657908552246},
+  {lat: 47.61280614641761, lng: -122.31104228132324},
+  {lat: 47.616277731393026, lng: -122.30812403791504},
+  {lat: 47.61465768708585, lng: -122.34400126569824},
+  {lat: 47.62796370671503, lng: -122.35687586896972},
+  {lat: 47.60019078101783, lng: -122.31636378400879},
+  {lat: 47.5874565936553, lng: -122.31619212263183},
+  {lat: 47.585372522511335, lng: -122.3064074241455},
+  {lat: 47.585372522511335, lng: -122.32820841901855},
+  {lat: 47.585025169253306, lng: -122.33713481062011},
+  {lat: 47.585025169253306, lng: -122.30949732893066},
+  {lat: 47.58791970930754, lng: -122.29370448225097},
+  {lat: 47.596718128147415, lng: -122.29198786848144},
+  {lat: 47.60493636719486, lng: -122.30142924421386},
+  {lat: 47.61419480806479, lng: -122.30005595319824},
+  {lat: 47.603200227068214, lng: -122.3115572654541},
+  {lat: 47.59833872816973, lng: -122.29902598493652},
+  {lat: 47.6048206263124, lng: -122.29662272565918},
+  {lat: 47.61384764611016, lng: -122.29833933942871},
+  {lat: 47.618823413896, lng: -122.29181620710449},
+  {lat: 47.62414580407628, lng: -122.29868266218261}
+]
+
+i = 0
+events.each do |event|
+  Event.create!(event.merge(locations[i]))
+  i+=1
+end
+
 users = User.all
+events = Event.all
 
 events.each do |event|
   users.sample(rand(1..40)).each do |user|
@@ -252,203 +245,203 @@ end
 
 Group.destroy_all
 groups = []
+
 groups << {
-  name: 'Introduction to Microsoft Visual Studio Team Services with Andrew Cook',
+  name: 'Seattle Apache Flink Meetup',
   description: 'Years ago when deploying software you would have to follow a tedious multistep process. A process which would fail under the smallest of errors and inevitably there were errors. Luckily today there are tools to automate not old the deployment process but also the build process. This allows teams and individuals to setup and use continuous integration and continuous deployment. We’ll explore setting up a Git repository, automating builds and deployments from that repository, setting up project work and bug tracking, and creating load tests to measure performance. Microsoft Visual Studio Team Services (https://docs.microsoft.com/en-us/vsts/user-guide/what-is-vsts) is a cloud service for collaborating on code development. It provides an integrated set of features that you access through your web browser or IDE client, including: Git repositories for source control of your codeBuild and release management to support continuous integration and delivery of your apps. Agile tools to support planning and tracking your work, code defects, and issues using Kanban and Scrum methods. A variety of tools to test your apps, including manual/exploratory testing, load testing, and continuous testing. Highly customizable dashboards for sharing progress and trends. Built-in wiki for sharing information with your team.',
   owner_id: 8,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073237/group1_mjgwdn.png"
 }
 
 groups << {
-  name: 'NSCoder Night (Wayward Coffeehouse, Seattle)',
+  name: 'Learn Code in Seattle (Flatiron School Study Groups)',
   description: 'NSCoder Night is held every Tuesday evening at Wayward Coffeehouse. It is an informal gathering of Mac and iOS application developers where people can code, talk shop, ask and answer questions, and find some willing victims for project demonstrations. There is no program, and there is a wide range of experience levels. You will find us spread over several tables in the back. We are generally there from about 7 until about 10, with people dropping in all through the evening. No RSVP is needed for this event. It is very informal. Everyone is welcome for all or part of the evening. Bring your MacBook and your iOS or Mac applications in development. Experience levels vary from raw beginner to seasoned expert, and attendance is typically 10 to 20 people.',
   owner_id: 2,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1517614425/eventfuls/1_iW7i51bEZSnoPwGgWW93Kg.jpg"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073236/group2_hbibg9.png"
 }
 
 groups << {
-  name: 'WordPress Developers (restarting for 2018!): Advanced Custom Fields deep-dive',
+  name: 'Seattle Data Science',
   description: 'We are relaunching the WordPress Developer meetup. Join us on March 13th at WeWork in South Lake Union to get into the code side of WordPress, from plugins, to themes, and beyond. Learn something new, network with your fellow developers, share what you’d like to see at the next Developer Meetup, and help us build a better WordPress developer community here in Seattle. Healthy websites change over time just like healthy businesses do. As developers, it is our job to empower website admins, and make our sites more maintainable. This talk shares design patterns and best practices you will find invaluable when creating custom themes for clients, and demonstrates how to implement them using Advanced Custom Fields (ACF). ACF is a powerful development tool used to easily manage custom fields and data. Since the possibilities are endless, we will explore a handful of specific examples.',
   owner_id: 3,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518663169/eventfuls/imbf9ozrndsmiyb1yn6v.png"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073238/group3_b8a9i9.png"
 }
 
 groups << {
-  name: 'NEW! Software Craftsmanship - Eastside',
+  name: 'Ember.js Seattle',
   description: 'MicroObject Development is an approach to Object Oriented Programming with Single Responsibility as the core principle guiding principle for how behavior is encapsulated. This core principle is supported by Encapsulation, Behavior, and Immutability. Along with how microObjects uses these principles, Quinn will talk about hands-on-keyboard practices that he and other developers use to produce simple, maintainable, and easily testable code.',
   owner_id: 8,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989479/profile_event.png"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073240/group4_edxgn0.png"
 }
 
 groups << {
-  name: 'Webinar - Excel and Power BI Clinic)',
+  name: 'Seattle University Web Developers Meetup',
   description: 'FREE Excel & Power BI Clinic - Solving real world Excel and Power BI Problems occurs every third Thursday of each month from 9am to 10am Central African Time (CAT). Please register for the date and time that works best for you: Get your (on the Job) Excel & Power BI questions ready for our monthly live Clinic. David is a Power Pivot, DAX, Excel and Financial Modelling guru, he is also an ATD Master Trainer. He has taught over 4000 participants in the past 22 years of working with Excel and now also working Power BI since its beta launch as Power Pivot in Excel 2010. Learn how to apply Excel & Power BI tools to solve real-world challenges you face at work. This is distinct from the IT-centric approach to solving problems. Excel and Power BI are productivity tools afterall and not just IT software. Spaces are limited, so book your spot today and get your questions ready. This webinar runs every month. After registering, you will receive a confirmation email containing information about joining the webinar.',
   owner_id: 2,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989610/profile_event2.png"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073238/group5_wmzi9d.png"
 }
 
 groups << {
-  name: 'Tech Happy Hour',
-  description: 'Complete your Thursday with Tech Happy Hour! Enjoy food from different culture & mingle with our growing TECH community. ENJOY, LEARN & CELEBRATE THE DIFFERENCE ! ABOUT OUR TECH FRIENDLY COMMUNITY extraSlice is more than just a co-working space, it’s a Tech Innovation Place that embraces 3Cs – Community. Culture. Collaboration . Our purpose is to create an environment that allows you to focus on what’s really important, getting your work done, meet interesting people and learning. All these in one place!',
+  name: 'Seattle Artificial Intelligence Meetup',
+  description: 'Complete your Thursday with Seattle Artificial Intelligence Meetup! Enjoy food from different culture & mingle with our growing TECH community. ENJOY, LEARN & CELEBRATE THE DIFFERENCE ! ABOUT OUR TECH FRIENDLY COMMUNITY extraSlice is more than just a co-working space, it’s a Tech Innovation Place that embraces 3Cs – Community. Culture. Collaboration . Our purpose is to create an environment that allows you to focus on what’s really important, getting your work done, meet interesting people and learning. All these in one place!',
   owner_id: 3,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989689/profile_event3.png"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073238/group7_kcd4hh.png"
 }
 
 groups << {
   name: 'Hack Night @ ATLAS Workbase',
   description: 'Beginner or experienced developer, come join us at ATLAS Workbase to work on whatever coding project you would like to work on. If you are looking for some guidance, we will try to help you with that too!',
   owner_id: 8,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073237/group1_mjgwdn.png"
 }
 
 groups << {
-  name: 'Introduction to Microsoft Visual Studio Team Services with Andrew Cook 2',
+  name: 'Seattle Apache Flink Meetup 2',
   description: 'Years ago when deploying software you would have to follow a tedious multistep process. A process which would fail under the smallest of errors and inevitably there were errors. Luckily today there are tools to automate not old the deployment process but also the build process. This allows teams and individuals to setup and use continuous integration and continuous deployment. We’ll explore setting up a Git repository, automating builds and deployments from that repository, setting up project work and bug tracking, and creating load tests to measure performance. Microsoft Visual Studio Team Services (https://docs.microsoft.com/en-us/vsts/user-guide/what-is-vsts) is a cloud service for collaborating on code development. It provides an integrated set of features that you access through your web browser or IDE client, including: Git repositories for source control of your codeBuild and release management to support continuous integration and delivery of your apps. Agile tools to support planning and tracking your work, code defects, and issues using Kanban and Scrum methods. A variety of tools to test your apps, including manual/exploratory testing, load testing, and continuous testing. Highly customizable dashboards for sharing progress and trends. Built-in wiki for sharing information with your team.',
   owner_id: 8,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073237/group1_mjgwdn.png"
 }
 
 groups << {
-  name: 'NSCoder Night (Wayward Coffeehouse, Seattle 2)',
+  name: 'Learn Code in Seattle (Flatiron School Study Groups) 2',
   description: 'NSCoder Night is held every Tuesday evening at Wayward Coffeehouse. It is an informal gathering of Mac and iOS application developers where people can code, talk shop, ask and answer questions, and find some willing victims for project demonstrations. There is no program, and there is a wide range of experience levels. You will find us spread over several tables in the back. We are generally there from about 7 until about 10, with people dropping in all through the evening. No RSVP is needed for this event. It is very informal. Everyone is welcome for all or part of the evening. Bring your MacBook and your iOS or Mac applications in development. Experience levels vary from raw beginner to seasoned expert, and attendance is typically 10 to 20 people.',
   owner_id: 2,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1517614425/eventfuls/1_iW7i51bEZSnoPwGgWW93Kg.jpg"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073236/group2_hbibg9.png"
 }
 
 groups << {
   name: 'WordPress Developers (restarting for 2018!) 2: Advanced Custom Fields deep-dive',
   description: 'We are relaunching the WordPress Developer meetup. Join us on March 13th at WeWork in South Lake Union to get into the code side of WordPress, from plugins, to themes, and beyond. Learn something new, network with your fellow developers, share what you’d like to see at the next Developer Meetup, and help us build a better WordPress developer community here in Seattle. Healthy websites change over time just like healthy businesses do. As developers, it is our job to empower website admins, and make our sites more maintainable. This talk shares design patterns and best practices you will find invaluable when creating custom themes for clients, and demonstrates how to implement them using Advanced Custom Fields (ACF). ACF is a powerful development tool used to easily manage custom fields and data. Since the possibilities are endless, we will explore a handful of specific examples.',
   owner_id: 3,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518663169/eventfuls/imbf9ozrndsmiyb1yn6v.png"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073238/group3_b8a9i9.png"
 }
 
 groups << {
-  name: 'NEW! Software Craftsmanship - Eastside 2',
+  name: 'Ember.js Seattle 2',
   description: 'MicroObject Development is an approach to Object Oriented Programming with Single Responsibility as the core principle guiding principle for how behavior is encapsulated. This core principle is supported by Encapsulation, Behavior, and Immutability. Along with how microObjects uses these principles, Quinn will talk about hands-on-keyboard practices that he and other developers use to produce simple, maintainable, and easily testable code.',
   owner_id: 8,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989479/profile_event.png"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073240/group4_edxgn0.png"
 }
 
 groups << {
   name: 'Webinar - Excel and Power BI Clinic 2)',
   description: 'FREE Excel & Power BI Clinic - Solving real world Excel and Power BI Problems occurs every third Thursday of each month from 9am to 10am Central African Time (CAT). Please register for the date and time that works best for you: Get your (on the Job) Excel & Power BI questions ready for our monthly live Clinic. David is a Power Pivot, DAX, Excel and Financial Modelling guru, he is also an ATD Master Trainer. He has taught over 4000 participants in the past 22 years of working with Excel and now also working Power BI since its beta launch as Power Pivot in Excel 2010. Learn how to apply Excel & Power BI tools to solve real-world challenges you face at work. This is distinct from the IT-centric approach to solving problems. Excel and Power BI are productivity tools afterall and not just IT software. Spaces are limited, so book your spot today and get your questions ready. This webinar runs every month. After registering, you will receive a confirmation email containing information about joining the webinar.',
   owner_id: 2,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989610/profile_event2.png"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073238/group5_wmzi9d.png"
 }
 
 groups << {
-  name: 'Tech Happy Hour 2',
-  description: 'Complete your Thursday with Tech Happy Hour! Enjoy food from different culture & mingle with our growing TECH community. ENJOY, LEARN & CELEBRATE THE DIFFERENCE ! ABOUT OUR TECH FRIENDLY COMMUNITY extraSlice is more than just a co-working space, it’s a Tech Innovation Place that embraces 3Cs – Community. Culture. Collaboration . Our purpose is to create an environment that allows you to focus on what’s really important, getting your work done, meet interesting people and learning. All these in one place!',
+  name: 'Seattle Artificial Intelligence Meetup 2',
+  description: 'Complete your Thursday with Seattle Artificial Intelligence Meetup! Enjoy food from different culture & mingle with our growing TECH community. ENJOY, LEARN & CELEBRATE THE DIFFERENCE ! ABOUT OUR TECH FRIENDLY COMMUNITY extraSlice is more than just a co-working space, it’s a Tech Innovation Place that embraces 3Cs – Community. Culture. Collaboration . Our purpose is to create an environment that allows you to focus on what’s really important, getting your work done, meet interesting people and learning. All these in one place!',
   owner_id: 3,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989689/profile_event3.png"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073238/group7_kcd4hh.png"
 }
 
 groups << {
   name: 'Hack Night @ ATLAS Workbase 2',
   description: 'Beginner or experienced developer, come join us at ATLAS Workbase to work on whatever coding project you would like to work on. If you are looking for some guidance, we will try to help you with that too!',
   owner_id: 8,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073237/group1_mjgwdn.png"
 }
 
 groups << {
-  name: 'Introduction to Microsoft Visual Studio Team Services with Andrew Cook 3',
+  name: 'Seattle Apache Flink Meetup 3',
   description: 'Years ago when deploying software you would have to follow a tedious multistep process. A process which would fail under the smallest of errors and inevitably there were errors. Luckily today there are tools to automate not old the deployment process but also the build process. This allows teams and individuals to setup and use continuous integration and continuous deployment. We’ll explore setting up a Git repository, automating builds and deployments from that repository, setting up project work and bug tracking, and creating load tests to measure performance. Microsoft Visual Studio Team Services (https://docs.microsoft.com/en-us/vsts/user-guide/what-is-vsts) is a cloud service for collaborating on code development. It provides an integrated set of features that you access through your web browser or IDE client, including: Git repositories for source control of your codeBuild and release management to support continuous integration and delivery of your apps. Agile tools to support planning and tracking your work, code defects, and issues using Kanban and Scrum methods. A variety of tools to test your apps, including manual/exploratory testing, load testing, and continuous testing. Highly customizable dashboards for sharing progress and trends. Built-in wiki for sharing information with your team.',
   owner_id: 8,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073237/group1_mjgwdn.png"
 }
 
 groups << {
-  name: 'NSCoder Night (Wayward Coffeehouse, Seattle) 3',
+  name: 'Learn Code in Seattle (Flatiron School Study Groups) 3',
   description: 'NSCoder Night is held every Tuesday evening at Wayward Coffeehouse. It is an informal gathering of Mac and iOS application developers where people can code, talk shop, ask and answer questions, and find some willing victims for project demonstrations. There is no program, and there is a wide range of experience levels. You will find us spread over several tables in the back. We are generally there from about 7 until about 10, with people dropping in all through the evening. No RSVP is needed for this event. It is very informal. Everyone is welcome for all or part of the evening. Bring your MacBook and your iOS or Mac applications in development. Experience levels vary from raw beginner to seasoned expert, and attendance is typically 10 to 20 people.',
   owner_id: 2,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1517614425/eventfuls/1_iW7i51bEZSnoPwGgWW93Kg.jpg"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073236/group2_hbibg9.png"
 }
 
 groups << {
-  name: 'WordPress Developers (restarting for 2018!): Advanced Custom Fields deep-dive 3',
+  name: 'Seattle Data Science 3',
   description: 'We are relaunching the WordPress Developer meetup. Join us on March 13th at WeWork in South Lake Union to get into the code side of WordPress, from plugins, to themes, and beyond. Learn something new, network with your fellow developers, share what you’d like to see at the next Developer Meetup, and help us build a better WordPress developer community here in Seattle. Healthy websites change over time just like healthy businesses do. As developers, it is our job to empower website admins, and make our sites more maintainable. This talk shares design patterns and best practices you will find invaluable when creating custom themes for clients, and demonstrates how to implement them using Advanced Custom Fields (ACF). ACF is a powerful development tool used to easily manage custom fields and data. Since the possibilities are endless, we will explore a handful of specific examples.',
   owner_id: 3,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518663169/eventfuls/imbf9ozrndsmiyb1yn6v.png"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073238/group3_b8a9i9.png"
 }
 
 groups << {
-  name: 'NEW! Software Craftsmanship - Eastside 3',
+  name: 'Ember.js Seattle 3',
   description: 'MicroObject Development is an approach to Object Oriented Programming with Single Responsibility as the core principle guiding principle for how behavior is encapsulated. This core principle is supported by Encapsulation, Behavior, and Immutability. Along with how microObjects uses these principles, Quinn will talk about hands-on-keyboard practices that he and other developers use to produce simple, maintainable, and easily testable code.',
   owner_id: 8,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989479/profile_event.png"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073240/group4_edxgn0.png"
 }
 
 groups << {
-  name: 'Webinar - Excel and Power BI Clinic) 3',
+  name: 'Seattle University Web Developers Meetup 3',
   description: 'FREE Excel & Power BI Clinic - Solving real world Excel and Power BI Problems occurs every third Thursday of each month from 9am to 10am Central African Time (CAT). Please register for the date and time that works best for you: Get your (on the Job) Excel & Power BI questions ready for our monthly live Clinic. David is a Power Pivot, DAX, Excel and Financial Modelling guru, he is also an ATD Master Trainer. He has taught over 4000 participants in the past 22 years of working with Excel and now also working Power BI since its beta launch as Power Pivot in Excel 2010. Learn how to apply Excel & Power BI tools to solve real-world challenges you face at work. This is distinct from the IT-centric approach to solving problems. Excel and Power BI are productivity tools afterall and not just IT software. Spaces are limited, so book your spot today and get your questions ready. This webinar runs every month. After registering, you will receive a confirmation email containing information about joining the webinar.',
   owner_id: 2,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989610/profile_event2.png"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073238/group5_wmzi9d.png"
 }
 
 groups << {
-  name: 'Tech Happy Hour 3',
-  description: 'Complete your Thursday with Tech Happy Hour! Enjoy food from different culture & mingle with our growing TECH community. ENJOY, LEARN & CELEBRATE THE DIFFERENCE ! ABOUT OUR TECH FRIENDLY COMMUNITY extraSlice is more than just a co-working space, it’s a Tech Innovation Place that embraces 3Cs – Community. Culture. Collaboration . Our purpose is to create an environment that allows you to focus on what’s really important, getting your work done, meet interesting people and learning. All these in one place!',
+  name: 'Seattle Artificial Intelligence Meetup 3',
+  description: 'Complete your Thursday with Seattle Artificial Intelligence Meetup! Enjoy food from different culture & mingle with our growing TECH community. ENJOY, LEARN & CELEBRATE THE DIFFERENCE ! ABOUT OUR TECH FRIENDLY COMMUNITY extraSlice is more than just a co-working space, it’s a Tech Innovation Place that embraces 3Cs – Community. Culture. Collaboration . Our purpose is to create an environment that allows you to focus on what’s really important, getting your work done, meet interesting people and learning. All these in one place!',
   owner_id: 3,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989689/profile_event3.png"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073238/group7_kcd4hh.png"
 }
 
 groups << {
   name: 'Hack Night @ ATLAS Workbase 3',
   description: 'Beginner or experienced developer, come join us at ATLAS Workbase to work on whatever coding project you would like to work on. If you are looking for some guidance, we will try to help you with that too!',
   owner_id: 8,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073237/group1_mjgwdn.png"
 }
 
 groups << {
-  name: 'Introduction to Microsoft Visual Studio Team Services with Andrew Cook 4',
+  name: 'Seattle Apache Flink Meetup 4',
   description: 'Years ago when deploying software you would have to follow a tedious multistep process. A process which would fail under the smallest of errors and inevitably there were errors. Luckily today there are tools to automate not old the deployment process but also the build process. This allows teams and individuals to setup and use continuous integration and continuous deployment. We’ll explore setting up a Git repository, automating builds and deployments from that repository, setting up project work and bug tracking, and creating load tests to measure performance. Microsoft Visual Studio Team Services (https://docs.microsoft.com/en-us/vsts/user-guide/what-is-vsts) is a cloud service for collaborating on code development. It provides an integrated set of features that you access through your web browser or IDE client, including: Git repositories for source control of your codeBuild and release management to support continuous integration and delivery of your apps. Agile tools to support planning and tracking your work, code defects, and issues using Kanban and Scrum methods. A variety of tools to test your apps, including manual/exploratory testing, load testing, and continuous testing. Highly customizable dashboards for sharing progress and trends. Built-in wiki for sharing information with your team.',
   owner_id: 8,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073237/group1_mjgwdn.png"
 }
 
 groups << {
-  name: 'NSCoder Night (Wayward Coffeehouse, Seattle) 4',
+  name: 'Learn Code in Seattle (Flatiron School Study Groups) 4',
   description: 'NSCoder Night is held every Tuesday evening at Wayward Coffeehouse. It is an informal gathering of Mac and iOS application developers where people can code, talk shop, ask and answer questions, and find some willing victims for project demonstrations. There is no program, and there is a wide range of experience levels. You will find us spread over several tables in the back. We are generally there from about 7 until about 10, with people dropping in all through the evening. No RSVP is needed for this event. It is very informal. Everyone is welcome for all or part of the evening. Bring your MacBook and your iOS or Mac applications in development. Experience levels vary from raw beginner to seasoned expert, and attendance is typically 10 to 20 people.',
   owner_id: 2,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1517614425/eventfuls/1_iW7i51bEZSnoPwGgWW93Kg.jpg"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073236/group2_hbibg9.png"
 }
 
 groups << {
-  name: 'WordPress Developers (restarting for 2018!): Advanced Custom Fields deep-dive 4',
+  name: 'Seattle Data Science 4',
   description: 'We are relaunching the WordPress Developer meetup. Join us on March 13th at WeWork in South Lake Union to get into the code side of WordPress, from plugins, to themes, and beyond. Learn something new, network with your fellow developers, share what you’d like to see at the next Developer Meetup, and help us build a better WordPress developer community here in Seattle. Healthy websites change over time just like healthy businesses do. As developers, it is our job to empower website admins, and make our sites more maintainable. This talk shares design patterns and best practices you will find invaluable when creating custom themes for clients, and demonstrates how to implement them using Advanced Custom Fields (ACF). ACF is a powerful development tool used to easily manage custom fields and data. Since the possibilities are endless, we will explore a handful of specific examples.',
   owner_id: 3,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518663169/eventfuls/imbf9ozrndsmiyb1yn6v.png"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073238/group3_b8a9i9.png"
 }
 
 groups << {
-  name: 'NEW! Software Craftsmanship - Eastside 4',
+  name: 'Ember.js Seattle 4',
   description: 'MicroObject Development is an approach to Object Oriented Programming with Single Responsibility as the core principle guiding principle for how behavior is encapsulated. This core principle is supported by Encapsulation, Behavior, and Immutability. Along with how microObjects uses these principles, Quinn will talk about hands-on-keyboard practices that he and other developers use to produce simple, maintainable, and easily testable code.',
   owner_id: 8,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989479/profile_event.png"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073240/group4_edxgn0.png"
 }
 
 groups << {
-  name: 'Webinar - Excel and Power BI Clinic) 4',
+  name: 'Seattle University Web Developers Meetup 4',
   description: 'FREE Excel & Power BI Clinic - Solving real world Excel and Power BI Problems occurs every third Thursday of each month from 9am to 10am Central African Time (CAT). Please register for the date and time that works best for you: Get your (on the Job) Excel & Power BI questions ready for our monthly live Clinic. David is a Power Pivot, DAX, Excel and Financial Modelling guru, he is also an ATD Master Trainer. He has taught over 4000 participants in the past 22 years of working with Excel and now also working Power BI since its beta launch as Power Pivot in Excel 2010. Learn how to apply Excel & Power BI tools to solve real-world challenges you face at work. This is distinct from the IT-centric approach to solving problems. Excel and Power BI are productivity tools afterall and not just IT software. Spaces are limited, so book your spot today and get your questions ready. This webinar runs every month. After registering, you will receive a confirmation email containing information about joining the webinar.',
   owner_id: 2,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989610/profile_event2.png"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073238/group5_wmzi9d.png"
 }
 
 groups << {
-  name: 'Tech Happy Hour 4',
-  description: 'Complete your Thursday with Tech Happy Hour! Enjoy food from different culture & mingle with our growing TECH community. ENJOY, LEARN & CELEBRATE THE DIFFERENCE ! ABOUT OUR TECH FRIENDLY COMMUNITY extraSlice is more than just a co-working space, it’s a Tech Innovation Place that embraces 3Cs – Community. Culture. Collaboration . Our purpose is to create an environment that allows you to focus on what’s really important, getting your work done, meet interesting people and learning. All these in one place!',
+  name: 'Seattle Artificial Intelligence Meetup 4',
+  description: 'Complete your Thursday with Seattle Artificial Intelligence Meetup! Enjoy food from different culture & mingle with our growing TECH community. ENJOY, LEARN & CELEBRATE THE DIFFERENCE ! ABOUT OUR TECH FRIENDLY COMMUNITY extraSlice is more than just a co-working space, it’s a Tech Innovation Place that embraces 3Cs – Community. Culture. Collaboration . Our purpose is to create an environment that allows you to focus on what’s really important, getting your work done, meet interesting people and learning. All these in one place!',
   owner_id: 3,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1520989689/profile_event3.png"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073238/group7_kcd4hh.png"
 }
 
 groups << {
   name: 'Hack Night @ ATLAS Workbase 4',
   description: 'Beginner or experienced developer, come join us at ATLAS Workbase to work on whatever coding project you would like to work on. If you are looking for some guidance, we will try to help you with that too!',
   owner_id: 8,
-  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1518490458/eventfuls/aobl5pu1dxx7nhiavbow.png"
+  picture_url: "http://res.cloudinary.com/dylanpt16/image/upload/v1521073237/group1_mjgwdn.png"
 }
-
-location = [
+locations = [
   {lat: 47.59392551032141, lng: -122.2954210960205},
   {lat: 47.59948194082594, lng: -122.31344554060058},
   {lat: 47.60839414897103, lng: -122.31018397443847},
@@ -489,7 +482,7 @@ location = [
 
 i = 0
 groups.each do |group|
-  Group.create!(group.merge(location[i]))
+  Group.create!(group.merge(locations[i]))
   i+=1
 end
 
