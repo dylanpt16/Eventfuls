@@ -22,7 +22,7 @@
     "redux-thunk": "^2.2.0",
     "webpack": "^3.10.0"
   },
-  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "description": "https://eventfuls.herokuapp.com/",
   "version": "1.0.0",
   "main": "index.js",
   "directories": {
@@ -35,9 +35,11 @@
     "npm": "5.6.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "webpack",
-    "webpack": "webpack --watch"
+    "heroku-postbuild": "webpack --config webpack.config.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylanpt16/eventfuls.git"
   },
   "keywords": [],
   "author": "",
