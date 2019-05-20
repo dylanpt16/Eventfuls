@@ -4,7 +4,7 @@ import { fetchLocation } from '../../actions/event_actions';
 import Map from './map';
 
 const mapStateToProps = (state) => ({
-  center: state.location
+  center: state.ui.location
 });
 
 export default connect(

@@ -8,7 +8,7 @@ import Search from './search';
 const mapStateToProps = (state) => ({
   events: asArray(state.entities),
   groups: asGroupArray(state.entities),
-  center: state.location
+  center: state.ui.location
 });
 
 const mapDispatchToProps = (dispatch) => ({

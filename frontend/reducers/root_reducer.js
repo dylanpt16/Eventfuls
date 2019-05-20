@@ -3,7 +3,6 @@ import { combineReducers } from 'redux';
 import entities from './entities_reducer';
 import errors from './errors_reducer';
 import session from './session_reducer';
-import location from './location_reducer';
 import ui from './ui_reducer';
 
 const rootReducer = combineReducers({
@@ -11,7 +10,6 @@ const rootReducer = combineReducers({
   session,
   ui,
   errors,
-  location
 });
 
 export default rootReducer;
