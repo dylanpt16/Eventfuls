@@ -43,9 +43,7 @@ class EventForm extends React.Component {
   handleCloudinary(e) {
     e.preventDefault();
     cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, (error, results) => {
-      if(error)
-        console.log(error);
-      else
+      if(!error)
         this.setState({ picture_url: results[0].secure_url });
     });
   }
